@@ -1,4 +1,12 @@
 .rightSide {
     display: flex;
     flex-direction: column;
+    width: 50%;
+    height: 75%;
+    padding: 2.5%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }

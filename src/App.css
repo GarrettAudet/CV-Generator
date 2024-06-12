@@ -10,6 +10,8 @@ body {
   font-family: 'Times New Roman', 'Arial'
 }
 
-* {
-  box-sizing: border-box;
+.LeftSide,
+.RightSide {
+  flex: 1;
+  width: 50%;
 }

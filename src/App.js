@@ -4,7 +4,7 @@ import RightSide from './components/RightSide/RightSide';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
         <LeftSide />
         <RightSide />
     </div>
