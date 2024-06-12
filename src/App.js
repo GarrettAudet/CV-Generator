@@ -1,12 +1,12 @@
 import './App.css';
-import leftSide from './components/LeftSide.js'
-import rightSide from './components/RightSide.js'
+import LeftSide from './components/LeftSide';
+import RightSide from './components/RightSide';
 
 function App() {
   return (
     <div className="App">
-        <leftSide />
-        <rightSide />
+        <LeftSide />
+        <RightSide />
     </div>
   );
 }
