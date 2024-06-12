@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+body {
+  font-family: 'Times New Roman', 'Arial'
+}
+
 * {
   box-sizing: border-box;
 }
