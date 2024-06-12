@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from './Header/Header.js';
 
 const RightSide = () => {
   return (
-    <div className="right-side">
-      <ProfessionalExperience />
+    <div className="rightSide">
+      <Header />
     </div>
   );
 };
