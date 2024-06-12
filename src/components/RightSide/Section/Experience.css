@@ -1,0 +1,10 @@
+.underline {
+    width: 100%;
+    border-bottom: solid 0.1px black;
+}
+
+.sectionTitle {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 0px;
+}

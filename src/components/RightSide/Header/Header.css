@@ -8,7 +8,7 @@
 }
 
 /* Edit Sub Container */
-div {
+.headers {
     display: flex;
     gap: 4px;
 }
