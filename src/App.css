@@ -7,7 +7,8 @@
 }
 
 body {
-  font-family: 'Times New Roman', 'Arial'
+  font-family: 'Times New Roman', 'Arial';
+  background-color: #F7F4F3;
 }
 
 .leftSide,
