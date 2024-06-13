@@ -4,10 +4,14 @@
     justify-content: center;
     width: 75%;
     background-color: #fff;
-    border-radius: 12px;
     box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, .2);
     gap: 15px;
     padding: 12px 24px;
+}
+
+.buttonLoader,
+.loadResume {
+    border-radius: 12px;
 }
 
 button {
@@ -29,6 +33,11 @@ button.clearResume {
     font-weight: bold;
     background-color: transparent;
     border: none;
+}
+
+.loadResume {
+    background-color: #7A7D7D;
+    color: white;
 }
 
 .clearResume:hover,
