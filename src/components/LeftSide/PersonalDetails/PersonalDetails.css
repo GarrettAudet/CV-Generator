@@ -1,0 +1,9 @@
+.personalDetails {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, .2);
+    border-radius: 12px;
+    gap: 15px;
+    padding: 12px 24px;
+}
