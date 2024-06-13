@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import './PersonalDetails.css';  
+import './PersonalDetails.css';
+import '../CommonStyles/styles.css';  
 
 export default function PersonalDetails() {
     // Initialize state for each detail with default values
@@ -21,7 +22,7 @@ export default function PersonalDetails() {
     };
 
     return (
-        <div className="personalDetails">
+        <div className="personalDetails LHSInput">
             <h2 className='title'>Personal Details</h2>
             <form className='personalInput'>
                 <div className="detailItem">

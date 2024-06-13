@@ -1,0 +1,6 @@
+.Experience {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: white;
+}

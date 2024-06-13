@@ -1,5 +1,6 @@
 .app {
   display: flex;
+  justify-content: center;
   gap: 24px;
   padding: 30px 20px;
   width: 100%;
@@ -15,5 +16,9 @@ body {
 .rightSide {
   flex: 1;
   box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 600px;
+}
+
+.rightSide {
+  max-width: 800px;
 }
