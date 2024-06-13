@@ -8,7 +8,7 @@ export default function PersonalDetails() {
         fullName: 'Garrett Audet',
         specialization: 'Strategy & Operations',
         subSpecialization: 'Full-Stack Developer',
-        address: 'https://www.linkedin.com/in/garrettaudet/'
+        url: 'https://www.linkedin.com/in/garrettaudet/'
     });
 
     // Function to handle change in input fields
@@ -45,15 +45,15 @@ export default function PersonalDetails() {
                     <input 
                         type="text" 
                         name="subSpecialization" 
-                        value={details.phoneNumber} 
+                        value={details.subSpecialization} 
                         onChange={handleChange} />
                 </div>
                 <div className="detailItem">
                     <label>LinkedIn</label>
                     <input 
                         type="text" 
-                        name="address" 
-                        value={details.address} 
+                        name="url" 
+                        value={details.url} 
                         onChange={handleChange} />
                 </div>
             </form>

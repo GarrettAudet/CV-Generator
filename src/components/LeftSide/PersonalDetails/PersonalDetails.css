@@ -28,5 +28,9 @@
 }
 
 div input {
-    background-color: #7A7D7D
+    background-color: #7A7D7D;
+    border-radius: 6px;
+    padding: 6px;
+    color: white;
+    border: transparent;
 }
