@@ -22,10 +22,10 @@ export default function PersonalDetails() {
 
     return (
         <div className="personalDetails">
-            <h2>Personal Details</h2>
-            <form>
+            <h2 className='title'>Personal Details</h2>
+            <form className='personalInput'>
                 <div className="detailItem">
-                    <label>Full name:</label>
+                    <label>Full name</label>
                     <input 
                         type="text" 
                         name="fullName" 
@@ -33,7 +33,7 @@ export default function PersonalDetails() {
                         onChange={handleChange} />
                 </div>
                 <div className="detailItem">
-                    <label>Email:</label>
+                    <label>Specialization</label>
                     <input 
                         type="text" 
                         name="specialization" 
@@ -41,7 +41,7 @@ export default function PersonalDetails() {
                         onChange={handleChange} />
                 </div>
                 <div className="detailItem">
-                    <label>Phone number:</label>
+                    <label>Sub-Specialization</label>
                     <input 
                         type="text" 
                         name="subSpecialization" 
@@ -49,7 +49,7 @@ export default function PersonalDetails() {
                         onChange={handleChange} />
                 </div>
                 <div className="detailItem">
-                    <label>Address:</label>
+                    <label>LinkedIn</label>
                     <input 
                         type="text" 
                         name="address" 

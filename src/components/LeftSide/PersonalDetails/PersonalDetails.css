@@ -1,9 +1,32 @@
 .personalDetails {
     display: flex;
     flex-direction: column;
+    width: 75%;
     background-color: #fff;
     box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, .2);
     border-radius: 12px;
     gap: 15px;
     padding: 12px 24px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.personalInput {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 6px;
+}
+
+div input {
+    background-color: #7A7D7D
 }
