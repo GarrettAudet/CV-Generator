@@ -1,6 +1,7 @@
 .underline {
     width: 100%;
     border-bottom: solid 0.1px black;
+    margin-bottom: 12.5px;
 }
 
 .sectionTitle {

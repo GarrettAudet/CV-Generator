@@ -8,6 +8,8 @@ export default function RightSide() {
         <div className="rightSide">
             <Header />
             <Section title = "Professional Experience" />
+            <Section title = "Education & Publications" />
+            <Section title = "Volunteer Experience" />
         </div>
     );
 }
