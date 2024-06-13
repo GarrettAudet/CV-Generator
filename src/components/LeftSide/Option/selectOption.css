@@ -1,12 +1,17 @@
 .buttonLoader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, .2);
-    display: flex;
-    flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
-    padding: 12px;
+    padding: 12px 24px;
+}
+
+button {
+    padding: 10px 30px;
 }
 
 .icon {
@@ -14,7 +19,19 @@
     border-radius: 4px;
 }
 
+button.clearResume {
+    color: #5B2333;
+}
+
 .clearResume,
 .loadResume {
     font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+}
+
+.clearResume:hover,
+.loadResume:hover {
+    cursor: pointer;
 }
