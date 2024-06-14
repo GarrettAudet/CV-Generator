@@ -14,8 +14,8 @@ export default function Experience() {
     const [jobs, setJobs] = useState({
         jobTitle: 'Senior Analyst',
         company: 'Accenture',
-        startDate: 'July 2021',
-        endDate: 'November 2023',
+        startDate: "07/01/2021",
+        endDate: "11/01/2023",
         description: [
             "Developed a comprehensive go-to-market, growth, and business development strategy for Accenture’s Strategy and Machine Learning Practice, securing key sales inroads across 3 industries, and recognition as a top revenue opportunity in North America",
             "Collaborated with the CEO’s office to strategically integrate generative AI and environmental datasets into a market-leading technology firm’s geospatial product, significantly boosting model accuracy, and resulting in a multi-million-dollar joint venture.",
