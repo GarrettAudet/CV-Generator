@@ -10,7 +10,7 @@ export default function Experience() {
         <div className="Experience LHSInput">
             <h2 className="LHSInputHeader">
                 <div className="iconGrouped">
-                    <FontAwesomeIcon icon={faSchool} className='classIcon' />                    
+                    <FontAwesomeIcon icon={faSchool} className='classIcon educationIcon' />
                     Education
                 </div>
                 <FontAwesomeIcon icon={faChevronUp} />

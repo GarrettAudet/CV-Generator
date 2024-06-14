@@ -3,6 +3,7 @@ import Option from './Option/selectOption';
 import PersonalDetails from './PersonalDetails/PersonalDetails'
 import Experience from './WorkExperience/Experience'
 import Education from './Education/Education'
+import Awards from './Awards/Awards';
 import './LeftSide.css';  
 
 export default function LeftSide() {
@@ -12,6 +13,7 @@ export default function LeftSide() {
             <PersonalDetails />
             <Experience />
             <Education />
+            <Awards />
         </div>
     );
 }
