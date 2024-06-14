@@ -43,3 +43,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.rotate {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(180deg);
+}

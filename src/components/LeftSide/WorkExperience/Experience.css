@@ -4,3 +4,17 @@
     width: 75%;
     background-color: white;
 }
+
+.descriptionInput {
+    height: 65px;
+}
+
+.experienceLabel {
+    margin: 3px 0px;
+}
+
+.descriptionInput {
+    background-color: #7A7D7D;
+    color: white;
+    border-radius: 6px;
+}

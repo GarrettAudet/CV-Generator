@@ -51,7 +51,7 @@ export default function PersonalDetails() {
                 </div>
                 <div className="detailItem">
                     <label>LinkedIn</label>
-                    <input 
+                    <input
                         type="text" 
                         name="url" 
                         value={details.url} 
