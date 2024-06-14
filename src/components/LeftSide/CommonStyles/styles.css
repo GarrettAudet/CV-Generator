@@ -9,8 +9,13 @@
     padding: 12px 24px;
 }
 
+.LHSInput:hover {
+    cursor: pointer;
+}
+
 .LHSInputHeader {
     display: flex;
+    align-items: center;
     font-size: 18px;
     font-weight: bold;
     justify-content: space-between;
@@ -20,5 +25,10 @@
 
 .iconGrouped {
     display: flex;
+    align-items: center;
     gap: 10px;
+}
+
+.classIcon {
+    font-size: 16px
 }
