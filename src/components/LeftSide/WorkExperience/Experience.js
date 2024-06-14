@@ -7,6 +7,9 @@ import './Experience.css';
 import '../CommonStyles/styles.css'
 
 export default function Experience() {
+    // Set Active or Inactive
+    const [isVisible, setIsVisible] = useState(false);
+
     // Initialize state for each detail with default values
     const [jobs, setJobs] = useState({
         jobTitle: 'Senior Analyst',
@@ -51,17 +54,22 @@ export default function Experience() {
         }));
     };
 
+    // Toggle Visibility 
+    const toggleVisibility = () => {
+        setIsVisible(current => !current);
+    };
+
     // HTML 
     return (
         <div className="Experience LHSInput">
-            <h2 className="LHSInputHeader">
+            <h2 className="LHSInputHeader" onClick={toggleVisibility}>
                 <div className="iconGrouped">
                     <FontAwesomeIcon icon={faToolbox} className='classIcon experienceIcon'/>
                     Experience
                 </div>
                 <FontAwesomeIcon icon={faChevronUp} />
             </h2>
-            <form className='experienceInput hidden'>
+            <form className={`experienceInput ${!isVisible ? 'hidden' : ''}`}>
                 <div className="detailItem">
                     <label>Job Title</label>
                     <input 
