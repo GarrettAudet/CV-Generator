@@ -7,7 +7,10 @@
 
 .experienceDates {
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .descriptionInput {
@@ -22,4 +25,18 @@
     background-color: #7A7D7D;
     color: white;
     border-radius: 6px;
+    width: 100%;
+}
+
+/* Date Content */
+
+
+.inputField {
+    width: 100%;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+    width: 100%;
 }
