@@ -16,11 +16,23 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 28px;
     width: 100%;
+}
+
+.experienceDates .detailItem {
+    min-width: 100px;
+    flex: 1;
 }
 
 .experienceLabel {
     margin: 3px 0px;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+    width: 100%;
 }
 
 /* Description Input */
@@ -29,4 +41,11 @@
     color: white;
     border-radius: 6px;
     width: 100%;
+}
+
+
+@media (max-width: 600px) {
+    .experienceDates {
+        gap: 10px;
+    }
 }
