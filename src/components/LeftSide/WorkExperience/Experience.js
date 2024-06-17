@@ -31,7 +31,7 @@ export default function Experience() {
                     <FontAwesomeIcon icon={faToolbox} className='classIcon experienceIcon'/>
                     Experience
                 </div>
-                <FontAwesomeIcon icon={faChevronUp} className={`chevronUp ${isVisible ? 'rotate' : ''}`} />
+                <FontAwesomeIcon icon={faChevronUp} className={`chevronUp ${isVisible ? 'rotate' : 'notrotated'}`} />
             </h2>
             {jobs.map((job, index) => (  // Ensure this map is used
                 <form className={`experienceInput ${!isVisible ? 'hidden' : ''}`} key={index}>

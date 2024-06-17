@@ -53,6 +53,10 @@
     transform: rotate(180deg);
 }
 
+.notrotated {
+    transition: transform 0.3s ease-in-out;
+}
+
 /* All Inputs */
 .inputField {
     width: 100%;
