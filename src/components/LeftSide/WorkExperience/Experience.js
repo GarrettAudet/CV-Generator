@@ -1,4 +1,5 @@
 import React from 'react';
+import DatePicker from 'react-datepicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { faToolbox } from '@fortawesome/free-solid-svg-icons';
@@ -11,13 +12,13 @@ export default function Experience() {
     const [isVisible, setIsVisible] = useState(false);
 
     // Initialize state for each detail with default values
-    const [jobs, setJobs] = useState({
+    const [jobs, setJobs] = useState([{
         jobTitle: 'Senior Analyst',
         company: 'Accenture',
-        startDate: "07/01/2021",
-        endDate: "11/01/2023",
+        startDate: new Date(2021,6),
+        endDate: new Date(2023, 10),
         description: "Developed a comprehensive go-to-market, growth, and business development strategy for Accenture’s Strategy and Machine Learning Practice, securing key sales inroads across 3 industries, and recognition as a top revenue opportunity in North America"
-    });
+    }]);
 
     // Function to add a new job
     const addJob = (newJob) => {
@@ -81,21 +82,25 @@ export default function Experience() {
                 </div>
                 <div className="detailItem">
                     <label className="experienceLabel">Start Date</label>
-                    <input
+                    <DatePicker
                         className = 'inputField'    
                         type="date" 
                         name="startDate" 
                         value={jobs.startDate}  
-                        onChange={handleChange} />
+                        onChange={date => handleChange(date, 'startDate')} 
+                        dateFormat="MMMM yyyy" 
+                        showMonthYearPicker/>
                 </div>
                 <div className="detailItem">
                     <label className="experienceLabel">End Date</label>
-                    <input
+                    <DatePicker
                         className = 'inputField'   
                         type="date" 
                         name="endDate" 
                         value={jobs.endDate} 
-                        onChange={handleChange} />
+                        onChange={date => handleChange(date, 'endDate')}
+                        dateFormat="MMMM yyyy" 
+                        showMonthYearPicker/>
                 </div>
                 <div className="detailItem">
                     <label className="experienceLabel">Description</label>
