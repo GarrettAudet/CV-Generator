@@ -39,12 +39,9 @@ export default function Experience() {
     };
 
     // Edit Parameter
-    const handleChange = (event) => {
+    const handleChange = (event, index = 0) => {
         const { name, value } = event.target;
-        setJobs(prevJobs => ({
-            ...prevJobs,
-            [name]: value
-        }));
+        setJobs(jobs => jobs.map((job, idx) => idx === index ? {...job, [name]: value} : job));
     };
 
     // Toggle Visibility 
@@ -84,7 +81,6 @@ export default function Experience() {
                     <label className="experienceLabel">Start Date</label>
                     <DatePicker
                         className = 'inputField'    
-                        type="date" 
                         name="startDate" 
                         value={jobs.startDate}  
                         onChange={date => handleChange(date, 'startDate')} 
@@ -95,7 +91,6 @@ export default function Experience() {
                     <label className="experienceLabel">End Date</label>
                     <DatePicker
                         className = 'inputField'   
-                        type="date" 
                         name="endDate" 
                         value={jobs.endDate} 
                         onChange={date => handleChange(date, 'endDate')}
