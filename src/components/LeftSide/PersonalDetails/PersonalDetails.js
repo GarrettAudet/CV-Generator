@@ -27,7 +27,8 @@ export default function PersonalDetails() {
             <form className='personalInput'>
                 <div className="detailItem">
                     <label>Full name</label>
-                    <input 
+                    <input
+                        className="inputField" 
                         type="text" 
                         name="fullName" 
                         value={details.fullName} 
@@ -35,7 +36,8 @@ export default function PersonalDetails() {
                 </div>
                 <div className="detailItem">
                     <label>Specialization</label>
-                    <input 
+                    <input
+                        className="inputField" 
                         type="text" 
                         name="specialization" 
                         value={details.specialization} 
@@ -44,6 +46,7 @@ export default function PersonalDetails() {
                 <div className="detailItem">
                     <label>Sub-Specialization</label>
                     <input 
+                        className="inputField"
                         type="text" 
                         name="subSpecialization" 
                         value={details.subSpecialization} 
@@ -52,6 +55,7 @@ export default function PersonalDetails() {
                 <div className="detailItem">
                     <label>LinkedIn</label>
                     <input
+                        className="inputField"
                         type="text" 
                         name="url" 
                         value={details.url} 

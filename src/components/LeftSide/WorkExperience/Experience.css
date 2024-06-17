@@ -11,12 +11,6 @@
     margin-bottom: 10px;
 }
 
-/* All Form Label Content */
-.inputField {
-    width: 100%;
-    padding: 8px;
-}
-
 /* Date Content */
 .experienceDates {
     display: flex;

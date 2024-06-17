@@ -52,3 +52,9 @@
     transition: transform 0.3s ease-in-out;
     transform: rotate(180deg);
 }
+
+/* All Inputs */
+.inputField {
+    width: 100%;
+    padding: 8px;
+}
