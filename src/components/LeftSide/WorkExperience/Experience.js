@@ -55,25 +55,27 @@ export default function Experience() {
                             onChange={e => handleChange(index, e.target.name, e.target.value)}
                         />
                     </div>
-                    <div className="detailItem">
-                        <label className="experienceLabel">Start Date</label>
-                        <DatePicker
-                            className="inputField"
-                            selected={job.startDate}
-                            onChange={date => handleChange(index, 'startDate', date)}
-                            dateFormat="MMMM yyyy"
-                            showMonthYearPicker
-                        />
-                    </div>
-                    <div className="detailItem">
-                        <label className="experienceLabel">End Date</label>
-                        <DatePicker
-                            className="inputField"
-                            selected={job.endDate}
-                            onChange={date => handleChange(index, 'endDate', date)}
-                            dateFormat="MMMM yyyy"
-                            showMonthYearPicker
-                        />
+                    <div class = 'experienceDates'>
+                        <div className="detailItem">
+                            <label className="experienceLabel">Start Date</label>
+                            <DatePicker
+                                className="inputField"
+                                selected={job.startDate}
+                                onChange={date => handleChange(index, 'startDate', date)}
+                                dateFormat="MMMM yyyy"
+                                showMonthYearPicker
+                            />
+                        </div>
+                        <div className="detailItem">
+                            <label className="experienceLabel">End Date</label>
+                            <DatePicker
+                                className="inputField"
+                                selected={job.endDate}
+                                onChange={date => handleChange(index, 'endDate', date)}
+                                dateFormat="MMMM yyyy"
+                                showMonthYearPicker
+                            />
+                        </div>
                     </div>
                     <div className="detailItem">
                         <label className="experienceLabel">Description</label>

@@ -5,6 +5,11 @@
     background-color: white;
 }
 
+.experienceDates {
+    display: flex;
+    justify-content: space-between;
+}
+
 .descriptionInput {
     height: 65px;
 }
