@@ -44,8 +44,8 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1025px) {
     .experienceDates {
-        gap: 10px;
+        gap: 3px;
     }
 }
