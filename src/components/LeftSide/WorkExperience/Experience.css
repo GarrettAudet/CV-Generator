@@ -1,3 +1,4 @@
+/* Section */
 .Experience {
     display: flex;
     flex-direction: column;
@@ -5,38 +6,33 @@
     background-color: white;
 }
 
-.experienceDates {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+/* All Forms */
+.detailItem {
+    margin-bottom: 10px;
 }
 
-.descriptionInput {
-    height: 65px;
+/* All Form Label Content */
+.inputField {
+    width: 100%;
+    padding: 8px;
+}
+
+/* Date Content */
+.experienceDates {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .experienceLabel {
     margin: 3px 0px;
 }
 
+/* Description Input */
 .descriptionInput {
     background-color: #7A7D7D;
     color: white;
     border-radius: 6px;
-    width: 100%;
-}
-
-/* Date Content */
-
-
-.inputField {
-    width: 100%;
-}
-
-.react-datepicker-wrapper,
-.react-datepicker__input-container,
-.react-datepicker__input-container input {
     width: 100%;
 }
