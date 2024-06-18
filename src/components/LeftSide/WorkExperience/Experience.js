@@ -42,9 +42,21 @@ export default function Experience() {
         setJobs(prevJobs => prevJobs.map((job, idx) => idx === index ? {...job, [field]: value} : job));
     };
 
-    const toggleVisibility = () => {
-        setIsVisible(current => !current);
-    };
+    // Toggles Visibility of Specific ID
+    const toggleVisibility = (id) => {
+        // Update the jobs state by creating a new array with modified visibility
+        setJobs(jobs => jobs.map(job => {
+            if (job.id === id) {
+                // Toggle the visibility of the job that matches the ID
+                return {
+                    ...job,
+                    isVisible: !job.isVisible
+                };
+            }
+            // Return all other jobs unchanged
+            return job;
+        }));
+    };    
 
     return (
         <div className="Experience LHSInput">
