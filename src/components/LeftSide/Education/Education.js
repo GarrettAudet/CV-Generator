@@ -10,12 +10,20 @@ export default function Experience() {
     const [isVisible, setIsVisible] = useState(false);
 
     // Education 
-    const [education, setEducation] = useState([{
-        school: "Queen's Universty",
-        degree: 'Bachelor of Commerce',
-        startDate: new Date(2021, 6),
-        endDate: new Date(2023, 10),
-    }]);
+    const [education, setEducation] = useState([
+        {
+            school: "Queen's University",
+            degree: 'Bachelor of Commerce',
+            startDate: new Date(2016, 6),
+            endDate: new Date(2020, 10),
+        },
+        {
+            school: "Queen's University",
+            degree: 'Bachelor of Arts (Computer Science)',
+            startDate: new Date(2020, 7),
+            endDate: new Date(2021, 10),
+        }
+    ]);
 
     return (
         <div className="Experience LHSInput">
