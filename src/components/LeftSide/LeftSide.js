@@ -1,7 +1,9 @@
 import React from 'react';
 import Option from './Option/selectOption';
 import PersonalDetails from './PersonalDetails/PersonalDetails'
-import Experience from './WorkExperience/Experience'
+
+/* Work Experience Details */
+import JobEntry from './WorkExperience/JobEntry'
 import Education from './Education/Education'
 import Awards from './Awards/Awards';
 import './LeftSide.css';  
@@ -11,7 +13,7 @@ export default function LeftSide() {
         <div className="leftSide">
             <Option />
             <PersonalDetails />
-            <Experience />
+            <JobEntry />
             <Education />
             <Awards />
         </div>
