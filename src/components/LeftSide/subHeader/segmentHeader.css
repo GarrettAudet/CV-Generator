@@ -73,3 +73,14 @@
         gap: 3px;
     }
 }
+
+
+/* Add this in your CSS file for smooth transitions */
+.experienceInput {
+    transition: all 0.3s ease;
+}
+
+/* If you are using hidden class method */
+.hidden {
+    display: none;
+}

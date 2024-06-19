@@ -4,9 +4,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './JobEntry.css';
 import '../CommonStyles/styles.css'
 
-function JobEntry({ job, onChange, onDateChange }) {
+function JobEntry({ job, isVisible, onChange, onDateChange }) {
     return (
-        <form className={`experienceInput ${job.isVisible ? '' : 'hidden'}`}>
+        <form className={`experienceInput ${isVisible ? '' : 'hidden'}`}>
             <div className="detailItem">
                 <label className="experienceLabel">Job Title</label>
                 <input

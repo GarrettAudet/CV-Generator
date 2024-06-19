@@ -4,16 +4,10 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './segmentHeader.css';
 import '../CommonStyles/styles.css';
 
-export default function SegmentHeader( {icon, headerText}) {
-    const [isVisible, setIsVisible] = useState(false);
-
-    const toggleVisibility = () => {
-        setIsVisible(prevIsVisible => !prevIsVisible);  
-    };
-  
+export default function SegmentHeader( {icon, headerText, toggle, isVisible}) {
     return (
         <>
-            <h2 className="LHSInputHeader" onClick={toggleVisibility}>
+            <h2 className="LHSInputHeader" onClick={toggle}>
                 <div className="iconGrouped">
                     <FontAwesomeIcon icon={icon} className='classIcon experienceIcon'/>
                     {headerText}
