@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import JobEntry from './JobEntry';
 import SegmentHeader from '../subHeader/segmentHeader'; 
+import AddExperience from './AddExperience';
 import { faToolbox } from '@fortawesome/free-solid-svg-icons';
 import { jobsData } from '../sampleData/sampleData'; 
 
@@ -44,6 +45,7 @@ function Experience() {
                     onDateChange={(field, date) => handleDateChange(index, field, date)}
                 />
             ))}
+            <AddExperience />
         </div>
     );
 }
