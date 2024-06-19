@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import JobEntry from './JobEntry';
+import ExperienceHeader from './ExperienceHeader'
 import SegmentHeader from '../subHeader/segmentHeader'; 
 import AddExperience from './AddExperience';
 import { faToolbox } from '@fortawesome/free-solid-svg-icons';
