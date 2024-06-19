@@ -1,7 +1,9 @@
+/* Set Box Sizing for all LHS Elements */
 * {
     box-sizing: border-box;
 }
 
+/* Set Standard Segment Sizes */
 .LHSInput {
     display: flex;
     flex-direction: column;
@@ -27,37 +29,7 @@
     padding: 10px 0px;
 }
 
-.iconGrouped {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    line-height: 1;
-    gap: 10px;
-}
-
-.classIcon {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.classIcon {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.rotate {
-    transition: transform 0.3s ease-in-out;
-    transform: rotate(180deg);
-}
-
-.notrotated {
-    transition: transform 0.3s ease-in-out;
-}
-
-/* All Inputs */
+/* Set Standard Size for User Inputs */
 .inputField {
     width: 100%;
     padding: 8px;

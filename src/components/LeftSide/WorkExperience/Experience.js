@@ -6,6 +6,7 @@ import { jobsData } from '../sampleData/sampleData';
 
 function Experience() {
     const [jobs, setJobs] = useState(jobsData);
+    const [isVisible, setIsVisible] = useState(false);
 
     const handleFieldChange = (index, field, value) => {
         const newJobs = jobs.map((job, idx) => {
@@ -27,8 +28,10 @@ function Experience() {
         setJobs(newJobs);
     };
 
+    const toggleVisibility = () => setIsVisible(!isVisible);
+
     return (
-        <>
+        <div className = "Experience LHSInput">
             <SegmentHeader icon={faToolbox} headerText="Experience" />
             {jobs.map((job, index) => (
                 <JobEntry 
@@ -38,7 +41,7 @@ function Experience() {
                     onDateChange={(field, date) => handleDateChange(index, field, date)}
                 />
             ))}
-        </>
+        </div>
     );
 }
 

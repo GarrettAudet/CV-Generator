@@ -12,14 +12,14 @@ export default function SegmentHeader( {icon, headerText}) {
     };
   
     return (
-        <div className="Experience LHSInput">
+        <>
             <h2 className="LHSInputHeader" onClick={toggleVisibility}>
                 <div className="iconGrouped">
                     <FontAwesomeIcon icon={icon} className='classIcon experienceIcon'/>
                     {headerText}
                 </div>
-                <FontAwesomeIcon icon={faChevronUp} className={`chevronIcon ${isVisible ? 'rotated' : ''}`} />
+                <FontAwesomeIcon icon={faChevronUp} className={`chevronIcon ${isVisible ? 'rotated' : 'notrotated'}`} />
             </h2>
-        </div>
+        </>
     );
 }
