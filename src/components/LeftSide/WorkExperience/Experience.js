@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import JobEntry from './JobEntry';
-import SegmentHeader from './segmentHeader'
+import SegmentHeader from '../subHeader/segmentHeader'
 import { faToolbox } from '@fortawesome/free-solid-svg-icons';
 import { jobsData } from '../sampleData/sampleData';
 
@@ -28,7 +28,7 @@ function Experience() {
     };
 
     return (
-        <div>
+        <>
             <SegmentHeader icon={faToolbox} headerText="Experience" />
             {jobs.map((job, index) => (
                 <JobEntry 
@@ -38,7 +38,7 @@ function Experience() {
                     onDateChange={(field, date) => handleDateChange(index, field, date)}
                 />
             ))}
-        </div>
+        </>
     );
 }
 

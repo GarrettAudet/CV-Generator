@@ -2,6 +2,7 @@ import React from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './JobEntry.css';
+import '../CommonStyles/styles.css'
 
 function JobEntry({ job, onChange, onDateChange }) {
     return (
