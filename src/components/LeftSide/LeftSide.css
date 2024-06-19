@@ -4,5 +4,6 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    min-width: 350px;
     gap: 0.5rem;
 }

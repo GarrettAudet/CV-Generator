@@ -1,0 +1,13 @@
+.experienceHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    margin-right: -25px;
+    border-bottom: 5px solid #F7F4F7;
+}
+
+.firstItem {
+    border-top: 5px solid #F7F4F7;
+}
