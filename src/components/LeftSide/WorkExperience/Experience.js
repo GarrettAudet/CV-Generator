@@ -8,14 +8,8 @@ function Experience() {
     const [jobs, setJobs] = useState(jobsData);
     const [isVisible, setIsVisible] = useState(false);
 
-    const toggleJobVisibility = (id) => {
-        const updatedJobs = jobs.map(job => {
-            if (job.id === id) {
-                return { ...job, isVisible: !job.isVisible };
-            }
-            return job;
-        });
-        setJobs(updatedJobs);
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
     };
 
     const handleFieldChange = (index, field, value) => {
@@ -42,13 +36,14 @@ function Experience() {
 
     return (
         <div className = "Experience LHSInput">
-            <SegmentHeader icon={faToolbox} headerText="Experience" />
+            <SegmentHeader icon={faToolbox} headerText="Experience" toggle={toggleVisibility}/>
             {jobs.map((job, index) => (
                 <JobEntry 
                     key={job.id}
                     job={job}
                     onChange={(field, value) => handleFieldChange(index, field, value)}
                     onDateChange={(field, date) => handleDateChange(index, field, date)}
+                    toggleVisibility={() => toggleJobVisibility(job.id)}
                 />
             ))}
         </div>
