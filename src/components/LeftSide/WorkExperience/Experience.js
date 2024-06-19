@@ -8,6 +8,16 @@ function Experience() {
     const [jobs, setJobs] = useState(jobsData);
     const [isVisible, setIsVisible] = useState(false);
 
+    const toggleJobVisibility = (id) => {
+        const updatedJobs = jobs.map(job => {
+            if (job.id === id) {
+                return { ...job, isVisible: !job.isVisible };
+            }
+            return job;
+        });
+        setJobs(updatedJobs);
+    };
+
     const handleFieldChange = (index, field, value) => {
         const newJobs = jobs.map((job, idx) => {
             if (idx === index) {
