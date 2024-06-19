@@ -45,7 +45,7 @@ function Experience() {
                     onDateChange={(field, date) => handleDateChange(index, field, date)}
                 />
             ))}
-            <AddExperience />
+            <AddExperience headerText = "Add Experience"/>
         </div>
     );
 }

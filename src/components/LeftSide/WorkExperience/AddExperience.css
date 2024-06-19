@@ -1,0 +1,16 @@
+.addExperience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 6px solid #F7F4F7;
+    border-radius: 32px;
+    width: 50%;
+    height: 75%;
+}
+
+.addExperienceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
