@@ -34,7 +34,7 @@ function Experience() {
 
     return (
         <div className="Experience LHSInput">
-            <SegmentHeader icon={faToolbox} headerText="Experience" toggle={toggleVisibility} />
+            <SegmentHeader icon={faToolbox} headerText="Experience" toggle={toggleVisibility} isVisible = {isVisible} />
             {isVisible && jobs.map((job, index) => (
                 <JobEntry 
                     key={job.id}
