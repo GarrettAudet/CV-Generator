@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import JobEntry from './Experience';
+import JobEntry from './JobEntry';
 import SegmentHeader from './segmentHeader'
 import { faToolbox } from '@fortawesome/free-solid-svg-icons';
 import { jobsData } from '../sampleData/sampleData';

@@ -10,6 +10,8 @@ import Experience from './WorkExperience/Experience'
 
 /* import Education from './Education/Education'
 import Awards from './Awards/Awards';
+            <PersonalDetails />
+            <Experience />
 <Education />
 <Awards /> */
 import './LeftSide.css';  
