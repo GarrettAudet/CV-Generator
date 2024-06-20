@@ -6,6 +6,8 @@ import Option from './Option/selectOption';
 import PersonalDetails from './PersonalDetails/PersonalDetails'
 import Experience from './DataList/Sections/Experience'
 import Education from './DataList/Sections/Education'
+import Volunteering from './DataList/Sections/Volunteering'
+
 
 /* Import Styling for Left Side */
 import './LeftSide.css';  
@@ -17,6 +19,7 @@ export default function LeftSide() {
             <PersonalDetails />
             <Experience />
             <Education />
+            <Volunteering />
         </div>
     );
 }
