@@ -3,11 +3,12 @@ import { faSchool } from '@fortawesome/free-solid-svg-icons';
 import './Education.css';
 import SegmentHeader from '../subHeader/segmentHeader'
 import ExperienceHeader from '../WorkExperience/ExperienceHeader'
+import AddExperience from '../WorkExperience/AddExperience';
 import { educationData } from '../sampleData/sampleData'; 
 import '../CommonStyles/styles.css'
 
 export default function Education() {
-    const [educations, setEducation] = useState(jobsData);
+    const [educations, setEducation] = useState(educationData);
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
