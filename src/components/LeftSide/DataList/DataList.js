@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SegmentHeader from './SegmentHeader';
-import AddExperience from './AddExperience'; 
+import AddItem from './AddItem'; 
 import './DataList.css'
 
 function DataList({ data, setData, icon, sectionTitle, addText }) {
@@ -28,7 +28,7 @@ function DataList({ data, setData, icon, sectionTitle, addText }) {
                 {isVisible && items.map((item, index) => (
                     <SegmentHeader key={item.id} toggle={toggleVisibility} headerText={item.title} additionalClass={index === 0 ? 'firstItem' : ''}/>
                 ))}
-                <AddExperience headerText={addText} toggle={toggleVisibility} isVisible={isVisible}/>
+                <AddItem headerText={addText} toggle={toggleVisibility} isVisible={isVisible}/>
             </div>
         </div>
     );
