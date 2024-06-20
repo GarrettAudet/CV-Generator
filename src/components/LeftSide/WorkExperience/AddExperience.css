@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border: 6px solid #F7F4F7;
+    margin: 8px;
+    padding: 6px;
+    border: 4px solid #F7F4F7;
     border-radius: 32px;
     width: 50%;
     height: 75%;
@@ -17,4 +19,13 @@
 
 .hidden {
     display: none;
+}
+
+h4,
+.faPlus {
+    font-size: 0.75rem;
+}
+
+h4 {
+    margin: 0px;
 }

@@ -36,19 +36,21 @@ function Experience() {
     };
 
     return (
-        <div className="Experience LHSInput">
+        <div className="Experience">
             <SegmentHeader icon={faToolbox} headerText="Experience" toggle={toggleVisibility} isVisible = {isVisible} />
-            {isVisible && jobs.map((job, index) => (
-                <ExperienceHeader key = {job.id} toggle={toggleVisibility} headerText = {job.jobTitle} additionalClass = {index === 0 ? 'firstItem' : ''}/>
-                /* <JobEntry 
-                    key={job.id}
-                    job={job}
-                    isVisible={isVisible}
-                    onChange={(field, value) => handleFieldChange(index, field, value)}
-                    onDateChange={(field, date) => handleDateChange(index, field, date)}
-                /> */
-            ))}
-            <AddExperience headerText = "Add Experience" toggle={toggleVisibility} isVisible = {isVisible}/>
+            <div className={`elementContainer ${isVisible ? 'visible' : ''}`}>
+                {isVisible && jobs.map((job, index) => (
+                    <ExperienceHeader key = {job.id} toggle={toggleVisibility} headerText = {job.jobTitle} additionalClass = {index === 0 ? 'firstItem' : ''}/>
+                    /* <JobEntry 
+                        key={job.id}
+                        job={job}
+                        isVisible={isVisible}
+                        onChange={(field, value) => handleFieldChange(index, field, value)}
+                        onDateChange={(field, date) => handleDateChange(index, field, date)}
+                    /> */
+                ))}
+                <AddExperience headerText = "Add Experience" toggle={toggleVisibility} isVisible = {isVisible}/>
+            </div>
         </div>
     );
 }

@@ -7,7 +7,7 @@ export default function AddExperience({ headerText, isVisible, toggle }) {
     return (
         <div className={`addExperienceContainer ${isVisible ? 'visible' : 'hidden'}`}>
             <div className='addExperience' onClick={toggle}>
-                <FontAwesomeIcon icon={faPlus} />
+                <FontAwesomeIcon icon={faPlus} className = "faPlus"/>
                 <h4>{headerText}</h4>
             </div>
         </div>

@@ -8,6 +8,10 @@
     border-bottom: 5px solid #F7F4F7;
 }
 
+.experienceHeader .LHSInputHeader {
+    font-size: 1rem;
+}
+
 .firstItem {
     border-top: 5px solid #F7F4F7;
 }
