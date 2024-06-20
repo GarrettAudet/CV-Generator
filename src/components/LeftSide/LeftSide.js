@@ -15,6 +15,7 @@ import Awards from './Awards/Awards';
 <Education />
 <Awards /> */
 import './LeftSide.css';  
+import Education from './Education/Education';
 
 export default function LeftSide() {
     return (
@@ -22,6 +23,7 @@ export default function LeftSide() {
             <Option />
             <PersonalDetails />
             <Experience />
+            <Education />
         </div>
     );
 }
