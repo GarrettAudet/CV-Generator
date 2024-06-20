@@ -27,3 +27,22 @@ export const jobsData = [
         isVisible: false
     }
 ];
+
+export const educationData = [
+    {
+        id: 1,
+        educationTopic: 'Bachelor of Commerce',
+        university: "Queen's Univeristy",
+        startDate: new Date(2016, 9),
+        endDate: new Date(2020, 11),
+        isVisible: false
+    },
+    {
+        id: 2,
+        educationTopic: 'Senior Analyst',
+        university: "Queen's Univeristy",
+        startDate: new Date(2019, 6),
+        endDate: new Date(2020, 11),
+        isVisible: false
+    }
+];
