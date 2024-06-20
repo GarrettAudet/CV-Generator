@@ -2,9 +2,10 @@
 import React from 'react';
 import Option from './Option/selectOption';
 
-/* Import Segments */
-import DataList from './DataList/DataList'
+/* Import Components */
 import PersonalDetails from './PersonalDetails/PersonalDetails'
+import Experience from './DataList/Sections/Experience'
+import Education from './DataList/Sections/Education'
 
 /* Import Styling for Left Side */
 import './LeftSide.css';  
@@ -14,10 +15,8 @@ export default function LeftSide() {
         <div className="leftSide">
             <Option />
             <PersonalDetails />
-            <DataList />
-            <DataList />
-            <DataList />
-            <DataList />
+            <Experience />
+            <Education />
         </div>
     );
 }

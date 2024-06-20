@@ -1,7 +1,7 @@
 import React from 'react';
 import { faSchool } from '@fortawesome/free-solid-svg-icons';
-import { educationData } from '../sampleData/sampleData'; 
-import DataList from './DataList';
+import { educationData } from '../SampleData/SampleData'; 
+import DataList from '../DataList';
 
 function Education() {
     return <DataList data={educationData} setData={() => {}} icon={faSchool} sectionTitle="Education" addText="Add Education" />;
