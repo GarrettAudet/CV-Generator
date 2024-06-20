@@ -1,21 +1,23 @@
 /* Import Library */ 
 import React from 'react';
 
-/* Import Personal Information */
+/* Import Load Option or Clear Option */
 import Option from './Option/selectOption';
+
+/* Import Personal Information */
 import PersonalDetails from './PersonalDetails/PersonalDetails'
 
 /* Work Experience Details */
 import Experience from './WorkExperience/Experience'
 
-/* import Education from './Education/Education'
-import Awards from './Awards/Awards';
-            <PersonalDetails />
-            <Experience />
-<Education />
-<Awards /> */
-import './LeftSide.css';  
+/* Import Education Details */
 import Education from './Education/Education';
+
+/* Import Awards Details */
+import Awards from '../LeftSide/Awards/Awards';
+
+/* Import Styling for Left Side */
+import './LeftSide.css';  
 
 export default function LeftSide() {
     return (
@@ -24,6 +26,7 @@ export default function LeftSide() {
             <PersonalDetails />
             <Experience />
             <Education />
+            <Awards />
         </div>
     );
 }
