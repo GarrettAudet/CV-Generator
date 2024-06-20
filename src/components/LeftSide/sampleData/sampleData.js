@@ -31,16 +31,16 @@ export const jobsData = [
 export const educationData = [
     {
         id: 1,
-        educationTopic: 'Bachelor of Commerce',
-        university: "Queen's Univeristy",
+        educationTopic: 'Commerce',
+        university: "Queen's University",
         startDate: new Date(2016, 9),
         endDate: new Date(2020, 11),
         isVisible: false
     },
     {
         id: 2,
-        educationTopic: 'Senior Analyst',
-        university: "Queen's Univeristy",
+        educationTopic: 'Computer Science',
+        university: "Queen's University",
         startDate: new Date(2019, 6),
         endDate: new Date(2021, 11),
         isVisible: false
