@@ -42,6 +42,38 @@ export const educationData = [
         educationTopic: 'Senior Analyst',
         university: "Queen's Univeristy",
         startDate: new Date(2019, 6),
+        endDate: new Date(2021, 11),
+        isVisible: false
+    }
+];
+
+export const volunteerData = [
+    {
+        id: 1,
+        jobTitle: 'Software Design Lead',
+        company: 'ATTA',
+        startDate: new Date(2021, 10),
+        endDate: new Date(2022, 05),
+        description: "Developed a comprehensive go-to-market, growth, and business development strategy for Accenture’s Strategy and Machine Learning Practice, securing key sales inroads across 3 industries, and recognition as a top revenue opportunity in North America",
+        isVisible: false
+    },
+
+];
+
+export const awardsData = [
+    {
+        id: 1,
+        educationTopic: 'Bachelor of Commerce',
+        university: "Queen's Univeristy",
+        startDate: new Date(2016, 9),
+        endDate: new Date(2020, 11),
+        isVisible: false
+    },
+    {
+        id: 2,
+        educationTopic: 'Senior Analyst',
+        university: "Queen's Univeristy",
+        startDate: new Date(2019, 6),
         endDate: new Date(2020, 11),
         isVisible: false
     }
