@@ -4,7 +4,7 @@ import { educationData } from '../SampleData/SampleData';
 import DataList from '../DataList';
 
 function Education() {
-    return <DataList data={educationData} setData={() => {}} icon={faSchool} sectionTitle="Education" addText="Add Education" />;
+    return <DataList data={educationData} delineate = {","} setData={() => {}} icon={faSchool} sectionTitle="Education" addText="Add Education" />;
 }
 
 export default Education;

@@ -4,7 +4,7 @@ import { jobsData } from '../SampleData/SampleData';
 import DataList from '../DataList';
 
 function Experience() {
-    return <DataList data={jobsData} setData={() => {}} icon={faToolbox} sectionTitle="Experience" addText="Add Experience" />;
+    return <DataList data={jobsData} delineate = {","} setData={() => {}} icon={faToolbox} sectionTitle="Experience" addText="Add Experience" />;
 }
 
 export default Experience;

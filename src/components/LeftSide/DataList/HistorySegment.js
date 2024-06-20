@@ -4,10 +4,10 @@ import { faPenFancy } from '@fortawesome/free-solid-svg-icons';
 import './HistorySegment.css';
 import '../CommonStyles/styles.css'
 
-export default function HistorySegment({ headerText, institution, isVisible, toggle, additionalClass }) {
+export default function HistorySegment({ headerText, institution, delineate, isVisible, toggle, additionalClass }) {
     return (
         <div className={`experienceHeader ${isVisible ? 'hidden' : 'visible'} ${additionalClass}`}>
-            <h2 className="LHSInputHeader" onClick={toggle}>{headerText}, {institution}</h2>
+            <h2 className="LHSInputHeader" onClick={toggle}>{headerText}{delineate} {institution}</h2>
             <FontAwesomeIcon icon={faPenFancy} />
         </div>
     );
