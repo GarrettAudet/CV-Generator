@@ -53,7 +53,7 @@ export const volunteerData = [
         jobTitle: 'Software Design Lead',
         company: 'ATTA',
         startDate: new Date(2021, 10),
-        endDate: new Date(2022, 05),
+        endDate: new Date(2022, 5),
         description: "Developed a comprehensive go-to-market, growth, and business development strategy for Accenture’s Strategy and Machine Learning Practice, securing key sales inroads across 3 industries, and recognition as a top revenue opportunity in North America",
         isVisible: false
     },
@@ -63,18 +63,14 @@ export const volunteerData = [
 export const awardsData = [
     {
         id: 1,
-        educationTopic: 'Bachelor of Commerce',
-        university: "Queen's Univeristy",
-        startDate: new Date(2016, 9),
-        endDate: new Date(2020, 11),
+        awardTopic: 'International and National Awards',
+        description: "Recognized as 1 of 30 emerging leaders in Canadian business; Chosen from a highly competitive pool to present on foreign policy at the Oxford Diplomacy Forum before NATO/UK officials; Appointed as a Canadian representative to the World Trade Organization for significant contributions to digitally enabled trade.",
         isVisible: false
     },
     {
         id: 2,
-        educationTopic: 'Senior Analyst',
-        university: "Queen's Univeristy",
-        startDate: new Date(2019, 6),
-        endDate: new Date(2020, 11),
+        awardTopic: 'Technology and Skills',
+        description: "Proficient in Python, SQL, and R, with expertise in data processing (Pandas, NumPy), visualization (Matplotlib), and modelling (Keras, TensorFlow). Skilled in full-stack development technologies and frameworks such as HTML, CSS, MongoDB, Express, Node, and JavaScript.",
         isVisible: false
     }
 ];
