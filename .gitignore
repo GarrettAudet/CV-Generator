@@ -4,6 +4,12 @@ npm-debug.log
 yarn-debug.log
 yarn-error.log
 
+# Cache Files
+.cache/
+.parcel-cache/
+.next/cache/
+.vuepress/.cache/
+
 # Logs
 logs/
 *.log
