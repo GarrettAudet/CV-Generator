@@ -28,7 +28,7 @@ export const jobsData = [
     }
 ];
 
-export const emptyjobData = []
+export const emptyjobsData = []
 
 export const educationData = [
     {

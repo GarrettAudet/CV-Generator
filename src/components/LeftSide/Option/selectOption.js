@@ -6,11 +6,11 @@ import './selectOption.css';
 export default function Option() {
     return (
         <div className="buttonLoader LHSInput">
-            <button className = "clearResume">
+            <button className = "clearResume" onClick = {clearResume}>
             <FontAwesomeIcon icon={faTrash} className='icon'/>
             Clear Resume
             </button>
-            <button className = "loadResume">Load Example</button>
+            <button className = "loadResume" onClick = {loadResume}>Load Example</button>
         </div>
     );
 }
