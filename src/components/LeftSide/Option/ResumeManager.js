@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Option from './selectOption';
+import SelectOption from './selectOption';
 import {
   jobsData as initialJobsData,
   educationData as initialEducationData,
@@ -22,6 +22,7 @@ function ResumeManager() {
     setEducation(emptyeducationData);
     setVolunteer(emptyvolunteerData);
     setAwards(emptyawardsData);
+    console.log('clear')
   };
 
   const loadResume = () => {
@@ -29,13 +30,13 @@ function ResumeManager() {
     setEducation(initialEducationData);
     setVolunteer(initialVolunteerData);
     setAwards(initialAwardsData);
+    console.log('load')
   };
 
   return (
-    <div>
-      <selectOption clearResume={clearResume} loadResume={loadResume} />
-      {/* Render other components that use the jobs, education, volunteer, and awards data */}
-    </div>
+    <>
+      <SelectOption clearResume={clearResume} loadResume={loadResume} />
+    </>
   );
 }
 

@@ -1,8 +1,9 @@
 /* Import Library and Relevant Information */ 
 import React from 'react';
-import Option from './Option/selectOption';
+import SelectOption from './Option/selectOption';
 
 /* Import Components */
+import ResumeManager from './Option/ResumeManager'
 import PersonalDetails from './PersonalDetails/PersonalDetails'
 import Experience from './DataList/Sections/Experience'
 import Education from './DataList/Sections/Education'
@@ -16,7 +17,7 @@ import './LeftSide.css';
 export default function LeftSide() {
     return (
         <div className="leftSide">
-            <Option />
+            <ResumeManager />
             <PersonalDetails />
             <Experience />
             <Education />
