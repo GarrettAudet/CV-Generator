@@ -63,10 +63,10 @@ function EditCharacteristics({ job, onSave, onCancel }) {
                 />
             </div>
             <div className = "buttonFooter">
-                <button type="delete" onClick={onCancel}>Delete</button>
+                <button type="delete" onClick={onCancel}><span>Delete</span></button>
                 <div>
-                    <button type="button" onClick={onCancel}>Cancel</button>
-                    <button type="submit" className = "submit">Save</button>
+                    <button type="button" onClick={onCancel}><span>Cancel</span></button>
+                    <button type="submit" className = "submit"><span>Save</span></button>
                 </div>
             </div>
         </form>
