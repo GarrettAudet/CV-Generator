@@ -1,7 +1,7 @@
 import React from 'react';
 import EditCharacteristics from '../EditObject/EditCharacteristics';
 
-function EditMode({ selectedItem, handleSaveChanges, handleCancel }) {
+function EditMode({ selectedItem, handleSaveChanges, handleCancel, handleDelete }) {
     return (
         <div>
             {selectedItem && (
@@ -9,6 +9,7 @@ function EditMode({ selectedItem, handleSaveChanges, handleCancel }) {
                     job={selectedItem}
                     onSave={handleSaveChanges}
                     onCancel={handleCancel}
+                    onDelete={handleDelete}
                 />
             )}
         </div>

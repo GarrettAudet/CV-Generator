@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './EditCharacteristics.css'
 
-function EditCharacteristics({ job, onSave, onCancel }) {
+function EditCharacteristics({ job, onSave, onCancel, onDelete }) {
     const [editData, setEditData] = useState(job);
 
     // Ensure that editData updates when job prop changes
@@ -63,7 +63,7 @@ function EditCharacteristics({ job, onSave, onCancel }) {
                 />
             </div>
             <div className = "buttonFooter">
-                <button type="delete" onClick={onCancel}><span>Delete</span></button>
+                <button type="delete" onClick={onDelete}><span>Delete</span></button>
                 <div>
                     <button type="button" onClick={onCancel}><span>Cancel</span></button>
                     <button type="submit" className = "submit"><span>Save</span></button>

@@ -39,6 +39,14 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
         setIsVisible(true);       // Show items
     };
 
+    /* Handle Delete */
+    const handleDelete = (id) => {
+        const updatedItems = items.filter(item => item.id !== id);
+        setItems(updatedItems);
+        setIsEditVisible(false);  // Hide the editor after deleting
+        setIsVisible(true);       // Show items
+    };
+
     return (
         <div className="Experience">
             <SegmentHeader icon={icon} headerText={sectionTitle} toggle={toggleVisibility} isVisible={isVisible} />
@@ -59,6 +67,7 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
                         selectedItem={selectedItem}
                         handleSaveChanges={handleSaveChanges}
                         handleCancel={handleCancel}
+                        handleDelete={() => handleDelete(selectedItem.id)}
                     />
                 )}
             {isVisible && !isEditVisible &&(
