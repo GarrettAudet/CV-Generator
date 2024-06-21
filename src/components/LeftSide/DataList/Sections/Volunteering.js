@@ -3,7 +3,7 @@ import { faHandshakeAngle } from '@fortawesome/free-solid-svg-icons';
 import { volunteerData } from '../SampleData/SampleData'; 
 import DataList from '../DataList';
 
-function Volunteering() {
+function Volunteering(volunteerData) {
     return <DataList data={volunteerData} delineate = {", "} setData={() => {}} icon={faHandshakeAngle} sectionTitle="Volunteering" addText="Add Volunteering" />;
 }
 

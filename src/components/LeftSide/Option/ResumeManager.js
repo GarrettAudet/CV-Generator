@@ -11,6 +11,12 @@ import {
   emptyawardsData
 } from '../DataList/SampleData/SampleData';
 
+/* Import Relevant Modules */
+import Experience from '../DataList/Sections/Experience';
+import Education from '../DataList/Sections/Education';
+import Volunteering from '../DataList/Sections/Volunteering';
+import Awards from '../DataList/Sections/Awards';
+
 function ResumeManager() {
   const [jobs, setJobs] = useState(initialJobsData);
   const [education, setEducation] = useState(initialEducationData);
@@ -36,6 +42,10 @@ function ResumeManager() {
   return (
     <>
       <SelectOption clearResume={clearResume} loadResume={loadResume} />
+      <Experience jobsData = {jobs}/>
+      <Education educationData = {education}/>
+      <Volunteering volunteerData = {volunteer}/>
+      <Awards awardsData = {awards}/>
     </>
   );
 }

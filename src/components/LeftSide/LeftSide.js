@@ -10,6 +10,12 @@ import Education from './DataList/Sections/Education'
 import Volunteering from './DataList/Sections/Volunteering'
 import Awards from './DataList/Sections/Awards'
 
+/* Create a context */
+const ResumeDataContext = createContext();
+
+export function useResumeData() {
+    return useContext(ResumeDataContext);
+}
 
 /* Import Styling for Left Side */
 import './LeftSide.css';  
