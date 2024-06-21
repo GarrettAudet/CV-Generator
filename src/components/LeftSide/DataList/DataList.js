@@ -61,7 +61,7 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
                         handleCancel={handleCancel}
                     />
                 )}
-            {isVisible && (
+            {isVisible && !isEditVisible &&(
                 <AddItem headerText={addText} toggle={toggleVisibility} isVisible={isVisible} />
             )}
             </div>

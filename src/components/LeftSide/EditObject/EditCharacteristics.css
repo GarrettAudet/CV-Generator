@@ -3,6 +3,24 @@
     margin-bottom: 10px;
 }
 
+.formEdit {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.formInput {}
+
+.formInput input,
+.formInput textarea {
+    width: 100%;
+}
+
+.formInput textarea {
+    min-height: 150px;
+}
+
 /* Date Content */
 .experienceDates {
     display: flex;

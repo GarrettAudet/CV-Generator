@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import './EditCharacteristics.css'
 
 function EditCharacteristics({ job, onSave, onCancel }) {
     const [editData, setEditData] = useState(job);
@@ -15,11 +16,11 @@ function EditCharacteristics({ job, onSave, onCancel }) {
     };
 
     return (
-        <form onSubmit={(e) => {
+        <form className = "formEdit" onSubmit={(e) => {
             e.preventDefault();
             onSave(editData);
         }}>
-            <div>
+            <div className = "formInput">
                 <label>Job Title:</label>
                 <input
                     type="text"
@@ -27,7 +28,7 @@ function EditCharacteristics({ job, onSave, onCancel }) {
                     onChange={(e) => handleFieldChange('title', e.target.value)}
                 />
             </div>
-            <div>
+            <div className = "formInput">
                 <label>Company:</label>
                 <input
                     type="text"
@@ -35,7 +36,7 @@ function EditCharacteristics({ job, onSave, onCancel }) {
                     onChange={(e) => handleFieldChange('institution', e.target.value)}
                 />
             </div>
-            <div>
+            <div className = "formInput">
                 <label>Start Date:</label>
                 <DatePicker
                     selected={editData.startDate ? new Date(editData.startDate) : null}
@@ -44,7 +45,7 @@ function EditCharacteristics({ job, onSave, onCancel }) {
                     showMonthYearPicker
                 />
             </div>
-            <div>
+            <div className = "formInput">
                 <label>End Date:</label>
                 <DatePicker
                     selected={editData.endDate ? new Date(editData.endDate) : null}
@@ -53,7 +54,7 @@ function EditCharacteristics({ job, onSave, onCancel }) {
                     showMonthYearPicker
                 />
             </div>
-            <div>
+            <div className = "formInput">
                 <label>Description:</label>
                 <textarea
                     value={editData.description || ''}
