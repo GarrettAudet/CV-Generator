@@ -1,4 +1,4 @@
-export const jobsData = [
+export const initialJobsData = [
     {
         id: 1,
         title: 'Senior Analyst',
@@ -28,9 +28,7 @@ export const jobsData = [
     }
 ];
 
-export const emptyjobsData = []
-
-export const educationData = [
+export const initialEducationData = [
     {
         id: 1,
         title: 'Commerce',
@@ -49,9 +47,7 @@ export const educationData = [
     }
 ];
 
-export const emptyeducationData = []
-
-export const volunteerData = [
+export const initialVolunteerData = [
     {
         id: 1,
         title: 'Software Design Lead',
@@ -64,9 +60,7 @@ export const volunteerData = [
 
 ];
 
-export const emptyvolunteerData = []
-
-export const awardsData = [
+export const initialAwardsData = [
     {
         id: 1,
         title: 'International and National Awards',
@@ -80,5 +74,3 @@ export const awardsData = [
         isVisible: false
     }
 ];
-
-export const emptyawardsData = []

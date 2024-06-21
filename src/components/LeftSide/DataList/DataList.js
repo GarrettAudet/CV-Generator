@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import EditMode from './EditMode';
 import HistorySegment from './HistorySegment';
 import SegmentHeader from './SegmentHeader';
@@ -7,8 +7,19 @@ import './DataList.css';
 
 function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
     /* Handles Visibility of Items Passed in from Sample Data */
-    const [items, setItems] = useState(data);
+    const [items, setItems] = useState(data || []);
     const [isVisible, setIsVisible] = useState(false);
+
+    // Synchronize items with data prop
+    useEffect(() => {
+        if (Array.isArray(data)) {
+            console.log('useEffect triggered: data is an array', data);
+            setItems(data);
+        } else {
+            console.error('useEffect triggered: data is not an array', data);
+            setItems([]);
+        }
+    }, [data]);
 
     /* Handles Visibility of Object Data */
     const [selectedItem, setSelectedItem] = useState(null);
@@ -46,6 +57,8 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
         setIsEditVisible(false);  // Hide the editor after deleting
         setIsVisible(true);       // Show items
     };
+
+    console.log("DataList Items State: ", items)
 
     return (
         <div className="Experience">

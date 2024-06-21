@@ -1,23 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SelectOption from './Option/selectOption';
-import PersonalDetails from './PersonalDetails/PersonalDetails'
-import Experience from './DataList/Sections/Experience'
-import Education from './DataList/Sections/Education'
-import Volunteering from './DataList/Sections/Volunteering'
-import Awards from './DataList/Sections/Awards'
+import PersonalDetails from './PersonalDetails/PersonalDetails';
+import Experience from './DataList/Sections/Experience';
+import Education from './DataList/Sections/Education';
+import Volunteering from './DataList/Sections/Volunteering';
+import Awards from './DataList/Sections/Awards';
 import './LeftSide.css';
 
-// Assuming you have import paths and initial data available
 import {
   initialJobsData,
   initialEducationData,
   initialVolunteerData,
   initialAwardsData,
-  emptyjobsData,
-  emptyeducationData,
-  emptyvolunteerData,
-  emptyawardsData
-} from './DataList/SampleData/SampleData';  
+} from './DataList/SampleData/SampleData';
 
 export default function LeftSide() {
     const [jobs, setJobs] = useState(initialJobsData);
@@ -25,11 +20,28 @@ export default function LeftSide() {
     const [volunteer, setVolunteer] = useState(initialVolunteerData);
     const [awards, setAwards] = useState(initialAwardsData);
 
+    useEffect(() => {
+        console.log('Jobs updated:', jobs);
+    }, [jobs]);
+
+    useEffect(() => {
+        console.log('Education updated:', education);
+    }, [education]);
+
+    useEffect(() => {
+        console.log('Volunteer updated:', volunteer);
+    }, [volunteer]);
+
+    useEffect(() => {
+        console.log('Awards updated:', awards);
+    }, [awards]);
+
     const clearData = () => {
-        setJobs(emptyjobsData);
-        setEducation(emptyeducationData);
-        setVolunteer(emptyvolunteerData);
-        setAwards(emptyawardsData);
+        setJobs([]);
+        setEducation([]);
+        setVolunteer([]);
+        setAwards([]);
+        console.log('Clear data triggered');
     };
 
     const loadData = () => {
@@ -37,11 +49,12 @@ export default function LeftSide() {
         setEducation(initialEducationData);
         setVolunteer(initialVolunteerData);
         setAwards(initialAwardsData);
+        console.log('Load data triggered');
     };
 
     return (
         <div className="leftSide">
-            <SelectOption clearData={clearData} loadData={loadData} />
+            <SelectOption clearResume={clearData} loadResume={loadData} />
             <PersonalDetails />
             <Experience jobsData={jobs} />
             <Education educationData={education} />
@@ -50,3 +63,4 @@ export default function LeftSide() {
         </div>
     );
 }
+
