@@ -1,40 +1,49 @@
 import React, { useState } from 'react';
-import EditCharacteristics from '../EditObject/EditCharacteristics';
+import EditMode from './EditMode';
 import HistorySegment from './HistorySegment';
 import SegmentHeader from './SegmentHeader';
 import AddItem from './AddItem';
 import './DataList.css';
 
 function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
+    /* Handles Visibility of Items Passed in from Sample Data */
     const [items, setItems] = useState(data);
     const [isVisible, setIsVisible] = useState(false);
+
+    /* Handles Visibility of Object Data */
     const [selectedItem, setSelectedItem] = useState(null);
     const [isEditVisible, setIsEditVisible] = useState(false);
 
+    /* Toggle Visibility of Object */
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible); 
+    };
+
+    /* Select Item and Visibility */
     const handleEditClick = (item) => {
         setSelectedItem(item);
         setIsEditVisible(true);
     };
 
-    const toggleVisibility = () => {
-        setIsVisible(!isVisible); 
-    };
-
+    /* Handle updating Item */
     const handleSaveChanges = (updatedItem) => {
         const updatedItems = items.map(item => item.id === updatedItem.id ? updatedItem : item);
         setItems(updatedItems);
         setIsEditVisible(false);  // Hide the editor after saving changes
+        setIsVisible(true);       // Show items
     };
 
+    /* Cancel Editing Item */
     const handleCancel = () => {
         setIsEditVisible(false);  // Hide the editor on cancel
+        setIsVisible(true);       // Show items
     };
 
     return (
         <div className="Experience">
             <SegmentHeader icon={icon} headerText={sectionTitle} toggle={toggleVisibility} isVisible={isVisible} />
             <div className={`elementContainer ${isVisible ? 'visible' : ''}`}>
-                {isVisible && items.map((item, index) => (
+                {isVisible && !isEditVisible && items.map((item, index) => (
                     <HistorySegment
                         key={item.id}
                         delineate={delineate}
@@ -45,15 +54,17 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
                         additionalClass={index === 0 ? 'firstItem' : ''}
                     />
                 ))}
-                <AddItem headerText={addText} toggle={toggleVisibility} isVisible={isVisible}/>
-            </div>
-            {isEditVisible && selectedItem && (
-                <EditCharacteristics
-                    job={selectedItem}
-                    onSave={handleSaveChanges}
-                    onCancel={handleCancel}
-                />
+                {isVisible && isEditVisible && (
+                    <EditMode
+                        selectedItem={selectedItem}
+                        handleSaveChanges={handleSaveChanges}
+                        handleCancel={handleCancel}
+                    />
+                )}
+            {isVisible && (
+                <AddItem headerText={addText} toggle={toggleVisibility} isVisible={isVisible} />
             )}
+            </div>
         </div>
     );
 }
