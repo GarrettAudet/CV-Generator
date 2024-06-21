@@ -10,8 +10,6 @@
     gap: 10px;
 }
 
-.formInput {}
-
 .formInput input,
 .formInput textarea {
     width: 100%;
@@ -19,6 +17,30 @@
 
 .formInput textarea {
     min-height: 150px;
+}
+
+.buttonFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonFooter div {
+    display: flex;
+    gap: 10px;
+}
+
+.buttonFooter button {
+    font-size: 0.75rem;
+    border: 1px solid black;
+    padding: 8px 16px;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+.buttonFooter .submit {
+    color: #F7F4F3;
+    border: 1px solid #222222;
+    background-color: #222222;
 }
 
 /* Date Content */
