@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SelectOption from './selectOption';
 import {
   jobsData as initialJobsData,
@@ -23,12 +23,28 @@ function ResumeManager() {
   const [volunteer, setVolunteer] = useState(initialVolunteerData);
   const [awards, setAwards] = useState(initialAwardsData);
 
+   // Log updates to ensure that state changes are captured
+   useEffect(() => {
+    console.log('Jobs updated:', jobs);
+  }, [jobs]);
+
+  useEffect(() => {
+    console.log('Education updated:', education);
+  }, [education]);
+
+  useEffect(() => {
+    console.log('Volunteering updated:', volunteer);
+  }, [volunteer]);
+
+  useEffect(() => {
+    console.log('Awards updated:', awards);
+  }, [awards]);
+
   const clearResume = () => {
     setJobs(emptyjobsData);
     setEducation(emptyeducationData);
     setVolunteer(emptyvolunteerData);
     setAwards(emptyawardsData);
-    console.log('clear')
   };
 
   const loadResume = () => {
@@ -36,7 +52,6 @@ function ResumeManager() {
     setEducation(initialEducationData);
     setVolunteer(initialVolunteerData);
     setAwards(initialAwardsData);
-    console.log('load')
   };
 
   return (
