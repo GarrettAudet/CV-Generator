@@ -28,6 +28,8 @@ export const jobsData = [
     }
 ];
 
+export const emptyjobData = []
+
 export const educationData = [
     {
         id: 1,
@@ -47,6 +49,8 @@ export const educationData = [
     }
 ];
 
+export const emptyeducationData = []
+
 export const volunteerData = [
     {
         id: 1,
@@ -59,6 +63,8 @@ export const volunteerData = [
     },
 
 ];
+
+export const emptyvolunteerData = []
 
 export const awardsData = [
     {
@@ -74,3 +80,5 @@ export const awardsData = [
         isVisible: false
     }
 ];
+
+export const emptyawardsData = []
