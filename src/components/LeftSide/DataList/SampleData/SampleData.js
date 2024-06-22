@@ -72,6 +72,7 @@ export const initialVolunteerData = [
 export const initialAwardsData = [
     {
         id: 1,
+        type: 'Awards',
         title: 'International and National Awards',
         description: "Recognized as 1 of 30 emerging leaders in Canadian business; Chosen from a highly competitive pool to present on foreign policy at the Oxford Diplomacy Forum before NATO/UK officials; Appointed as a Canadian representative to the World Trade Organization for significant contributions to digitally enabled trade.",
         isVisible: false
