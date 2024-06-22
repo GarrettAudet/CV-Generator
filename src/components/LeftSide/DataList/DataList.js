@@ -28,6 +28,11 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
         setIsVisible(!isVisible); 
     };
 
+    /* Prompt Editing */
+    const insertNew = () => {
+        setIsVisible(!isVisible); 
+    };
+
     /* Select Item and Visibility */
     const handleEditClick = (item) => {
         setSelectedItem(item);
@@ -36,10 +41,18 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
 
     /* Handle updating Item */
     const handleSaveChanges = (updatedItem) => {
-        const updatedItems = items.map(item => item.id === updatedItem.id ? updatedItem : item);
+        let updatedItems;
+        if (items.some(item => item.id === updatedItem.id)) {
+            // Update existing item
+            updatedItems = items.map(item => item.id === updatedItem.id ? updatedItem : item);
+        } else {
+            // Add new item
+            updatedItems = [...items, { ...updatedItem, id: items.length + 1 }];
+        }
         setItems(updatedItems);
         setIsEditVisible(false);  // Hide the editor after saving changes
         setIsVisible(true);       // Show items
+        setData(updatedItems);    // Update the parent component's data
     };
 
     /* Cancel Editing Item */
@@ -54,6 +67,20 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
         setItems(updatedItems);
         setIsEditVisible(false);  // Hide the editor after deleting
         setIsVisible(true);       // Show items
+    };
+
+    /* Create New Edit */
+    const handleAddClick = () => {
+        const newItem = {
+            id: items.length + 1,
+            title: '',
+            institution: '',
+            startDate: null,
+            endDate: null,
+            description: ''
+        };
+        setSelectedItem(newItem);
+        setIsEditVisible(true);
     };
 
     return (
@@ -80,7 +107,7 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
                     />
                 )}
             {isVisible && !isEditVisible &&(
-                <AddItem headerText={addText} toggle={toggleVisibility} isVisible={isVisible} />
+                <AddItem headerText={addText} insertNew = {handleAddClick} isVisible={isVisible} />
             )}
             </div>
         </div>
