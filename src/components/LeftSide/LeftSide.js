@@ -7,7 +7,8 @@ import Volunteering from './DataList/Sections/Volunteering';
 import Awards from './DataList/Sections/Awards';
 import './LeftSide.css';
 
-import {
+import { 
+  initialPersonalInformation,  
   initialJobsData,
   initialEducationData,
   initialVolunteerData,
@@ -15,47 +16,40 @@ import {
 } from './DataList/SampleData/SampleData';
 
 export default function LeftSide() {
+    const [personal, setPersonal] = useState(initialPersonalInformation);
     const [jobs, setJobs] = useState(initialJobsData);
     const [education, setEducation] = useState(initialEducationData);
     const [volunteer, setVolunteer] = useState(initialVolunteerData);
     const [awards, setAwards] = useState(initialAwardsData);
 
-    useEffect(() => {
-        console.log('Jobs updated:', jobs);
-    }, [jobs]);
-
-    useEffect(() => {
-        console.log('Education updated:', education);
-    }, [education]);
-
-    useEffect(() => {
-        console.log('Volunteer updated:', volunteer);
-    }, [volunteer]);
-
-    useEffect(() => {
-        console.log('Awards updated:', awards);
-    }, [awards]);
-
     const clearData = () => {
+        setPersonal({
+            fullName: '',
+            specialization: '',
+            subSpecialization: '',
+            url: ''
+        });
         setJobs([]);
         setEducation([]);
         setVolunteer([]);
         setAwards([]);
-        console.log('Clear data triggered');
     };
 
     const loadData = () => {
+        setPersonal(initialPersonalInformation);
         setJobs(initialJobsData);
         setEducation(initialEducationData);
         setVolunteer(initialVolunteerData);
         setAwards(initialAwardsData);
-        console.log('Load data triggered');
     };
+
+    console.log("Personal Info", initialPersonalInformation);
+    console.log("Personal Item", personal);
 
     return (
         <div className="leftSide">
             <SelectOption clearResume={clearData} loadResume={loadData} />
-            <PersonalDetails />
+            <PersonalDetails personalDetail={personal} />
             <Experience jobsData={jobs} />
             <Education educationData={education} />
             <Volunteering volunteerData={volunteer} />
@@ -63,4 +57,5 @@ export default function LeftSide() {
         </div>
     );
 }
+
 

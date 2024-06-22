@@ -1,22 +1,25 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PersonalDetails.css';
 import '../CommonStyles/styles.css';  
 
-export default function PersonalDetails({personalDetail}) {
-    // Initialize state for each detail with default values
-    const [details, setDetails] = useState({
-        fullName: 'Garrett Audet',
-        specialization: 'Strategy & Operations',
-        subSpecialization: 'Full-Stack Developer',
-        url: 'https://www.linkedin.com/in/garrettaudet/'
-    });
+export default function PersonalDetails({ personalDetail }) {
+    // Prop and Set Value for Prop
+    const [items, setItems] = useState(personalDetail || {});
 
-    // Function to handle change in input fields
-    const handleChange = (e) => {
+    // Synchronize items
+    useEffect(() => {
+        if (typeof personalDetail === 'object' && personalDetail !== null) {
+            setItems(personalDetail);
+        } else {
+            setItems({});
+        }
+    }, [personalDetail]);
+
+    // Handle field changes
+    const handleFieldChange = (e) => {
         const { name, value } = e.target;
-        setDetails(prevDetails => ({
-            ...prevDetails,
+        setItems((prevItems) => ({
+            ...prevItems,
             [name]: value
         }));
     };
@@ -31,8 +34,8 @@ export default function PersonalDetails({personalDetail}) {
                         className="inputField" 
                         type="text" 
                         name="fullName" 
-                        value={details.fullName} 
-                        onChange={handleChange} />
+                        value={items.fullName || ''} 
+                        onChange={handleFieldChange} />
                 </div>
                 <div className="detailItem">
                     <label>Specialization</label>
@@ -40,8 +43,8 @@ export default function PersonalDetails({personalDetail}) {
                         className="inputField" 
                         type="text" 
                         name="specialization" 
-                        value={details.specialization} 
-                        onChange={handleChange} />
+                        value={items.specialization || ''} 
+                        onChange={handleFieldChange} />
                 </div>
                 <div className="detailItem">
                     <label>Sub-Specialization</label>
@@ -49,8 +52,8 @@ export default function PersonalDetails({personalDetail}) {
                         className="inputField"
                         type="text" 
                         name="subSpecialization" 
-                        value={details.subSpecialization} 
-                        onChange={handleChange} />
+                        value={items.subSpecialization || ''} 
+                        onChange={handleFieldChange} />
                 </div>
                 <div className="detailItem">
                     <label>LinkedIn</label>
@@ -58,10 +61,13 @@ export default function PersonalDetails({personalDetail}) {
                         className="inputField"
                         type="text" 
                         name="url" 
-                        value={details.url} 
-                        onChange={handleChange} />
+                        value={items.url || ''} 
+                        onChange={handleFieldChange} />
                 </div>
             </form>
         </div>
     );
 }
+
+
+

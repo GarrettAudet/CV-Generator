@@ -13,10 +13,8 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
     // Synchronize items with data prop
     useEffect(() => {
         if (Array.isArray(data)) {
-            console.log('useEffect triggered: data is an array', data);
             setItems(data);
         } else {
-            console.error('useEffect triggered: data is not an array', data);
             setItems([]);
         }
     }, [data]);
@@ -57,8 +55,6 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
         setIsEditVisible(false);  // Hide the editor after deleting
         setIsVisible(true);       // Show items
     };
-
-    console.log("DataList Items State: ", items)
 
     return (
         <div className="Experience">
