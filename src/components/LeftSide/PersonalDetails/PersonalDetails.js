@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './PersonalDetails.css';
 import '../CommonStyles/styles.css';  
 
-export default function PersonalDetails({ personalDetail }) {
+export default function PersonalDetails({ personalDetail, onPersonalChange }) {
     // Prop and Set Value for Prop
     const [items, setItems] = useState(personalDetail || {});
 
@@ -22,6 +22,7 @@ export default function PersonalDetails({ personalDetail }) {
             ...prevItems,
             [name]: value
         }));
+        onPersonalChange(name, value); // Update the parent state
     };
 
     return (
@@ -68,6 +69,8 @@ export default function PersonalDetails({ personalDetail }) {
         </div>
     );
 }
+
+
 
 
 

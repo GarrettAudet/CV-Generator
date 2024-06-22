@@ -43,13 +43,20 @@ export default function LeftSide() {
         setAwards(initialAwardsData);
     };
 
+    const handlePersonalChange = (name, value) => {
+        setPersonal((prevPersonal) => ({
+            ...prevPersonal,
+            [name]: value
+        }));
+    };
+
     console.log("Personal Info", initialPersonalInformation);
     console.log("Personal Item", personal);
 
     return (
         <div className="leftSide">
             <SelectOption clearResume={clearData} loadResume={loadData} />
-            <PersonalDetails personalDetail={personal} />
+            <PersonalDetails personalDetail={personal} onPersonalChange = {handlePersonalChange}/>
             <Experience jobsData={jobs} />
             <Education educationData={education} />
             <Volunteering volunteerData={volunteer} />
