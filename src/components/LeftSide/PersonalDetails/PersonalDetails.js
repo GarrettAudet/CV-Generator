@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './PersonalDetails.css';
 import '../CommonStyles/styles.css';  
 
-export default function PersonalDetails() {
+export default function PersonalDetails({personalDetail}) {
     // Initialize state for each detail with default values
     const [details, setDetails] = useState({
         fullName: 'Garrett Audet',

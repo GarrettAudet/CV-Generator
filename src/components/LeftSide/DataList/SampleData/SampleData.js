@@ -1,3 +1,15 @@
+export const personalInformation = [
+    {
+        id: 1,
+        title: 'Senior Analyst',
+        institution: 'Accenture',
+        startDate: new Date(2021, 6),
+        endDate: new Date(2023, 10),
+        description: "Developed a comprehensive go-to-market, growth, and business development strategy for Accenture’s Strategy and Machine Learning Practice, securing key sales inroads across 3 industries, and recognition as a top revenue opportunity in North America",
+        isVisible: false
+    }
+];
+
 export const initialJobsData = [
     {
         id: 1,
