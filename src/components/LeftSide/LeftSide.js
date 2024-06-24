@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import SelectOption from './Option/selectOption';
 import PersonalDetails from './PersonalDetails/PersonalDetails';
 import Experience from './DataList/Sections/Experience';
@@ -6,29 +6,28 @@ import Education from './DataList/Sections/Education';
 import Volunteering from './DataList/Sections/Volunteering';
 import Awards from './DataList/Sections/Awards';
 import './LeftSide.css';
-
-import { 
-  initialPersonalInformation,  
+import PersonalInfoContext from '../RightSide/Header/PersonalInfoContext'
+import {
   initialJobsData,
   initialEducationData,
   initialVolunteerData,
   initialAwardsData,
-} from './DataList/SampleData/SampleData';
+  initialPersonalInformation, 
+} from './DataList/SampleData/SampleData'; // Adjust the path as necessary
 
 export default function LeftSide() {
-    const [personal, setPersonal] = useState(initialPersonalInformation);
+    const { personalInfo, handlePersonalChange } = useContext(PersonalInfoContext);
+
     const [jobs, setJobs] = useState(initialJobsData);
     const [education, setEducation] = useState(initialEducationData);
     const [volunteer, setVolunteer] = useState(initialVolunteerData);
     const [awards, setAwards] = useState(initialAwardsData);
 
     const clearData = () => {
-        setPersonal({
-            fullName: '',
-            specialization: '',
-            subSpecialization: '',
-            url: ''
-        });
+        handlePersonalChange('fullName', '');
+        handlePersonalChange('specialization', '');
+        handlePersonalChange('subSpecialization', '');
+        handlePersonalChange('url', '');
         setJobs([]);
         setEducation([]);
         setVolunteer([]);
@@ -36,27 +35,20 @@ export default function LeftSide() {
     };
 
     const loadData = () => {
-        setPersonal(initialPersonalInformation);
+        handlePersonalChange('fullName', initialPersonalInformation.fullName);
+        handlePersonalChange('specialization', initialPersonalInformation.specialization);
+        handlePersonalChange('subSpecialization', initialPersonalInformation.subSpecialization);
+        handlePersonalChange('url', initialPersonalInformation.url);
         setJobs(initialJobsData);
         setEducation(initialEducationData);
         setVolunteer(initialVolunteerData);
         setAwards(initialAwardsData);
     };
 
-    const handlePersonalChange = (name, value) => {
-        setPersonal((prevPersonal) => ({
-            ...prevPersonal,
-            [name]: value
-        }));
-    };
-
-    console.log("Personal Info", initialPersonalInformation);
-    console.log("Personal Item", personal);
-
     return (
         <div className="leftSide">
             <SelectOption clearResume={clearData} loadResume={loadData} />
-            <PersonalDetails personalDetail={personal} onPersonalChange = {handlePersonalChange}/>
+            <PersonalDetails personalDetail={personalInfo} onPersonalChange={handlePersonalChange} />
             <Experience jobsData={jobs} />
             <Education educationData={education} />
             <Volunteering volunteerData={volunteer} />
@@ -64,5 +56,6 @@ export default function LeftSide() {
         </div>
     );
 }
+
 
 

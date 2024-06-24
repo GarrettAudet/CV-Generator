@@ -1,17 +1,19 @@
+import React, { useContext } from 'react';
 import './RightSide.css';
-import React from 'react';
-import { initialPersonalInformation } from '../LeftSide/DataList/SampleData/SampleData.js'
-import Header from './Header/Header.js';
+import Header from './Header/Header';
 import Section from './Section/Experience';
+import PersonalInfoContext from '../RightSide/Header/PersonalInfoContext'; 
 
 export default function RightSide() {
+    const { personalInfo } = useContext(PersonalInfoContext);
+
     return (
         <div className="rightSide">
             <Header 
-                name={initialPersonalInformation.fullName} 
-                subheader1={initialPersonalInformation.specialization} 
-                subheader2={initialPersonalInformation.subSpecialization} 
-                linkedin={initialPersonalInformation.url}
+                name={personalInfo.fullName}
+                subheader1={personalInfo.specialization}
+                subheader2={personalInfo.subSpecialization}
+                linkedin={personalInfo.url}
             />
             <Section title="Professional Experience" />
             <Section title="Education & Publications" />
