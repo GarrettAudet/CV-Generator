@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './EditCharacteristics.css';
 
-function EditCharacteristics({ job, onSave, onCancel, onDelete }) {
+function EditCharacteristics({ job, onSave, onCancel, onDelete, isAwardsTrue }) {
     const [editData, setEditData] = useState(job);
 
     // Ensure that editData updates when job prop changes
@@ -23,17 +23,17 @@ function EditCharacteristics({ job, onSave, onCancel, onDelete }) {
             onSave(editData);
         }}>
             <div className="formInput">
-                <label>Job Title:</label>
+                <label>Title:</label>
                 <input
                     type="text"
                     value={editData.title || ''}
                     onChange={(e) => handleFieldChange('title', e.target.value)}
                 />
             </div>
-            {!isAwards && (
+            {!isAwards && !isAwardsTrue && (
                 <>
                     <div className="formInput">
-                        <label>Company:</label>
+                        <label>Institution:</label>
                         <input
                             type="text"
                             value={editData.institution || ''}

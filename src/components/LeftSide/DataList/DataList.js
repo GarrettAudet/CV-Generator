@@ -5,7 +5,7 @@ import SegmentHeader from './SegmentHeader';
 import AddItem from './AddItem';
 import './DataList.css';
 
-function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
+function DataList({ data, delineate, setData, icon, sectionTitle, addText, isAwards }) {
     /* Handles Visibility of Items Passed in from Sample Data */
     const [items, setItems] = useState(data || []);
     const [isVisible, setIsVisible] = useState(false);
@@ -104,6 +104,7 @@ function DataList({ data, delineate, setData, icon, sectionTitle, addText }) {
                         handleSaveChanges={handleSaveChanges}
                         handleCancel={handleCancel}
                         handleDelete={() => handleDelete(selectedItem.id)}
+                        isAwards = {isAwards}
                     />
                 )}
             {isVisible && !isEditVisible &&(

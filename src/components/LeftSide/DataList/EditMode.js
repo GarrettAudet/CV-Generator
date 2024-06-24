@@ -1,7 +1,7 @@
 import React from 'react';
 import EditCharacteristics from '../EditObject/EditCharacteristics';
 
-function EditMode({ selectedItem, handleSaveChanges, handleCancel, handleDelete }) {
+function EditMode({ selectedItem, handleSaveChanges, handleCancel, handleDelete, isAwards }) {
     return (
         <div>
             {selectedItem && (
@@ -10,6 +10,7 @@ function EditMode({ selectedItem, handleSaveChanges, handleCancel, handleDelete 
                     onSave={handleSaveChanges}
                     onCancel={handleCancel}
                     onDelete={handleDelete}
+                    isAwardsTrue = {isAwards}
                 />
             )}
         </div>

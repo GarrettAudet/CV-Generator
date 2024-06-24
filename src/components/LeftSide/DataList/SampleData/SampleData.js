@@ -79,6 +79,7 @@ export const initialAwardsData = [
     },
     {
         id: 2,
+        type: 'Awards',
         title: 'Technology and Skills',
         description: "Proficient in Python, SQL, and R, with expertise in data processing (Pandas, NumPy), visualization (Matplotlib), and modelling (Keras, TensorFlow). Skilled in full-stack development technologies and frameworks such as HTML, CSS, MongoDB, Express, Node, and JavaScript.",
         isVisible: false
