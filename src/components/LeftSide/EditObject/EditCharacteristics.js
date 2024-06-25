@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './EditCharacteristics.css';
 
-function EditCharacteristics({ job, onSave, onCancel, onDelete, isAwardsTrue }) {
+function EditCharacteristics({ job, onSave, onCancel, onDelete, isAwardsTrue, isEducationTrue }) {
     const [editData, setEditData] = useState(job);
 
     // Ensure that editData updates when job prop changes
@@ -60,14 +60,16 @@ function EditCharacteristics({ job, onSave, onCancel, onDelete, isAwardsTrue }) 
                     </div>
                 </>
             )}
-            <div className="formInput">
-                <label>Description:</label>
-                <textarea
-                    value={editData.description || ''}
-                    onChange={(e) => handleFieldChange('description', e.target.value)}
-                    rows="4"
-                />
-            </div>
+            {(!isEducationTrue &&
+                <div className="formInput">
+                    <label>Description:</label>
+                    <textarea
+                        value={editData.description || ''}
+                        onChange={(e) => handleFieldChange('description', e.target.value)}
+                        rows="4"
+                    />
+                </div>
+            )}
             <div className="buttonFooter">
                 <button type="button" onClick={onDelete}><span>Delete</span></button>
                 <div>
