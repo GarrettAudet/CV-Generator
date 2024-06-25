@@ -1,7 +1,7 @@
 import './sectionContent.css'
 import React from 'react';
 
-export default function Content(props) {
+export default function Content(content) {
 
     // Generate bullet points based on props.count
     const renderBulletPoints = () => {

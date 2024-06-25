@@ -18,6 +18,7 @@ export default function RightSide() {
             <Section title="Professional Experience" />
             <Section title="Education & Publications" />
             <Section title="Volunteer Experience" />
+            <Section title="Additional Information" />
         </div>
     );
 }
