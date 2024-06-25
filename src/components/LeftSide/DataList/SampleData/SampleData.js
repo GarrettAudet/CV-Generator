@@ -25,7 +25,7 @@ export const initialJobsData = [
         institution: 'MarText',
         startDate: new Date(2019, 6),
         endDate: new Date(2021, 6),
-        description: "Led the ideation and launch of a mobile internet product, targeting a service gap of 50M potential users, driving product strategy from market assessment to prototype development. // Orchestrated customer discovery across 3 emerging markets, conducting over 100 comprehensive interviews and market analysis to directly inform 5 product features that addressed key infrastructure barriers in emerging markets. // Spearheaded the rapid development of a product MVP, leveraging HTML, CSS, and JavaScript, to enable internet access in rural communities, culminating in a successful agreement for a pilot test trial in South Africa within a three-month timeframe.",
+        description: "Led the ideation and launch of a mobile internet product, targeting a service gap of 50M potential users, driving product strategy from market assessment to prototype development. // Orchestrated customer discovery across 3 emerging markets, conducting over 30 comprehensive interviews and market analysis to directly inform 5 product features that addressed key infrastructure barriers in emerging markets. // Spearheaded the rapid development of a product MVP, leveraging HTML, CSS, and JavaScript, to enable internet access in rural communities, culminating in a successful agreement for a pilot test trial in South Africa within a three-month timeframe.",
         isVisible: false
     },
     {
