@@ -59,3 +59,7 @@ li,
 .caption {
     font-style: italic;
 }
+
+.underline .sectionTitle {
+    font-size: 12px;
+}
