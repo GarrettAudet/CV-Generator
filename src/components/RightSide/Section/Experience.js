@@ -15,8 +15,7 @@ export default function Section({ title, data }) {
             <h2 className="sectionTitle">{title}</h2>
             {items.map((item, index) => (
                 <Content
-                    key={index}  
-                    content={item.description}
+                    item = {item}
                 />
             ))}
         </div>
