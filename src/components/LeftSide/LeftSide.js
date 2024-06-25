@@ -13,7 +13,7 @@ import {
   initialVolunteerData,
   initialAwardsData,
   initialPersonalInformation, 
-} from './DataList/SampleData/SampleData'; // Adjust the path as necessary
+} from './DataList/SampleData/SampleData'; 
 
 export default function LeftSide() {
     const { personalInfo, handlePersonalChange } = useContext(PersonalInfoContext);

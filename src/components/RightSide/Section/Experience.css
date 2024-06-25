@@ -1,6 +1,5 @@
 .underline {
     width: 100%;
-    border-bottom: solid 0.1px black;
     margin-bottom: 12.5px;
 }
 
@@ -8,4 +7,5 @@
     font-size: 10px;
     text-transform: uppercase;
     margin: 0px;
+    border-bottom: solid 0.1px black;
 }

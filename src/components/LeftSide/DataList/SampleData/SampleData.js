@@ -41,7 +41,9 @@ export const initialEducationData = [
     {
         id: 1,
         title: 'Commerce',
+        type: 'Education',
         institution: "Queen's University",
+        caption: "First Generation Student, Rhodes Scholar Nominee, Product Management & Full-Stack Development, Final 3-year GPA of 4.12/4.3",
         startDate: new Date(2016, 9),
         endDate: new Date(2020, 11),
         isVisible: false
@@ -49,7 +51,18 @@ export const initialEducationData = [
     {
         id: 2,
         title: 'Computer Science',
+        type: 'Education',
         institution: "Queen's University",
+        startDate: new Date(2019, 6),
+        endDate: new Date(2021, 11),
+        isVisible: false
+    },
+    {
+        id: 3,
+        title: 'Optimizing Financial Forecasts',
+        type: 'Publication',
+        institution: "Queen's University",
+        caption: "Published a machine learning advancement in natural language processing at the Institute of Electrical and Electronics Engineers International Conference on Big Data, enhancing equity price prediction accuracy by 40%, and showcasing the application of large language models in financial trend analysis.",
         startDate: new Date(2019, 6),
         endDate: new Date(2021, 11),
         isVisible: false

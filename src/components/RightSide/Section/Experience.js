@@ -4,6 +4,7 @@ import Content from '../SectionContent/sectionContent';
 
 export default function Section({ title, data }) {
     const [items, setItems] = useState(data || []);
+    console.log(data);
 
     useEffect(() => {
         setItems(data || []);
