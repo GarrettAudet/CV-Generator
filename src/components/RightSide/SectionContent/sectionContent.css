@@ -12,7 +12,10 @@ ul {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 6px;
+}
+
+.experienceItem span {
+    font-weight: normal;
 }
 
 .experienceTitle {
@@ -31,7 +34,12 @@ ul {
 
 .experienceParent {
     width: 100%;
-    margin-bottom: 20px;
+}
+
+.experienceItem,
+.experienceParent,
+.sectionTitle {
+    margin-bottom: 4px;
 }
 
 .experienceItem,

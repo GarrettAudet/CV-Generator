@@ -1,10 +1,9 @@
-import './Experience.css'
+import './Experience.css';
 import React, { useState, useEffect } from 'react';
 import Content from '../SectionContent/sectionContent';
 
-export default function Section({ title, data }) {
+export default function Section({ title, data, specialType }) {
     const [items, setItems] = useState(data || []);
-    console.log(data);
 
     useEffect(() => {
         setItems(data || []);
@@ -15,10 +14,14 @@ export default function Section({ title, data }) {
             <h2 className="sectionTitle">{title}</h2>
             {items.map((item, index) => (
                 <Content
-                    item = {item}
+                    key={index}
+                    item={item}
+                    specialType={specialType}  // Ensure this line passes the correct value
                 />
             ))}
         </div>
     );
 }
+
+
 
