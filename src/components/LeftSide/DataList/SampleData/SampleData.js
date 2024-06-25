@@ -11,6 +11,7 @@ export const initialJobsData = [
     {
         id: 1,
         title: 'Senior Analyst',
+        type: 'Professional',
         institution: 'Accenture',
         startDate: new Date(2021, 6),
         endDate: new Date(2023, 10),
@@ -20,6 +21,7 @@ export const initialJobsData = [
     {
         id: 2,
         title: 'Co-Founder',
+        type: 'Professional',
         institution: 'MarText',
         startDate: new Date(2019, 6),
         endDate: new Date(2021, 6),
@@ -29,6 +31,7 @@ export const initialJobsData = [
     {
         id: 3,
         title: 'Intelligence Operator',
+        type: 'Professional',
         institution: 'Canadian Armed Forces',
         startDate: new Date(2017, 6),
         endDate: new Date(2019, 5),
@@ -40,20 +43,22 @@ export const initialJobsData = [
 export const initialEducationData = [
     {
         id: 1,
-        type: "Education",
         title: 'Commerce & Computing Dual Degree',
+        type: 'Education',
         institution: "Queen's University",
         caption: "First Generation Student, Rhodes Scholar Nominee, Product Management & Full-Stack Development, Final 3-year GPA of 4.12/4.3",
+        description: ' ',
         startDate: new Date(2016, 8), 
         endDate: new Date(2021, 3), 
         isVisible: false
     },
     {
         id: 2,
-        type: "Publication",
         title: 'Optimizing Financial Forecasts: Applying LLMs to Analyze Stock Market Volatility',
-        institution: "Institute of Electrical and Electronics Engineers International Conference on Big Data",
+        type: 'Education',
+        institution: "IEEE",
         caption: "Published a machine learning advancement in natural language processing at the Institute of Electrical and Electronics Engineers International Conference on Big Data, enhancing equity price prediction accuracy by 40%, and showcasing the application of large language models in financial trend analysis.",
+        description: ' ',
         startDate: new Date(2021, 0), 
         endDate: new Date(2022, 0), 
         isVisible: false
@@ -64,6 +69,7 @@ export const initialVolunteerData = [
     {
         id: 1,
         title: 'Software Design Lead',
+        type: 'Volunteer',
         institution: 'ATTA',
         startDate: new Date(2021, 10),
         endDate: new Date(2022, 5),
@@ -76,15 +82,15 @@ export const initialVolunteerData = [
 export const initialAwardsData = [
     {
         id: 1,
-        type: 'Awards',
         title: 'International and National Awards',
+        type: 'Awards',
         description: "Recognized as 1 of 30 emerging leaders in Canadian business; Chosen from a highly competitive pool to present on foreign policy at the Oxford Diplomacy Forum before NATO/UK officials; Appointed as a Canadian representative to the World Trade Organization for significant contributions to digitally enabled trade.",
         isVisible: false
     },
     {
         id: 2,
-        type: 'Awards',
         title: 'Technology and Skills',
+        type: 'Awards',
         description: "Proficient in Python, SQL, and R, with expertise in data processing (Pandas, NumPy), visualization (Matplotlib), and modelling (Keras, TensorFlow). Skilled in full-stack development technologies and frameworks such as HTML, CSS, MongoDB, Express, Node, and JavaScript.",
         isVisible: false
     }

@@ -2,8 +2,8 @@ import './Experience.css';
 import React, { useState, useEffect } from 'react';
 import Content from '../SectionContent/sectionContent';
 
-export default function Section({ title, data, specialType }) {
-    const [items, setItems] = useState(data || []);
+export default function Section({ title, data }) {
+    const [items, setItems] = useState(data);
 
     useEffect(() => {
         setItems(data || []);
@@ -16,7 +16,6 @@ export default function Section({ title, data, specialType }) {
                 <Content
                     key={index}
                     item={item}
-                    specialType={specialType}  // Ensure this line passes the correct value
                 />
             ))}
         </div>

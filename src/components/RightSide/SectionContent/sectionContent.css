@@ -4,7 +4,8 @@ li {
     padding: 0;
 }
 
-ul {
+ul,
+.caption {
     padding-left: 13px;
 }
 
@@ -46,10 +47,15 @@ ul {
 ul,
 li,
 .experienceTitle,
-.experienceDateDuration {
+.experienceDateDuration,
+.caption {
     font-size: 10px;
 }
 
 .experienceTitle {
     min-width: 300px;
+}
+
+.caption {
+    font-style: italic;
 }
