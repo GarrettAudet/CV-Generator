@@ -1,21 +1,18 @@
 import './sectionContent.css'
 import React from 'react';
 
-export default function Content(content) {
-
-    // Generate bullet points based on props.count
+export default function Content({ content }) {
+    // Split the content text by "//" to generate bullet points
     const renderBulletPoints = () => {
-        let bullets = [];
-        for (let i = 0; i < PopStateEvent.count; i++) {
-            bullets.push(<li key={i} className="bulletPoint">Bullet {i + 1}</li>);
-        }
-        return bullets;
+        return content.split('//').map((bullet, index) => (
+            <li key={index} className="bulletPoint">{bullet.trim()}</li>
+        ));
     };
 
-    // Render bullet points
     return (
         <ul>
             {renderBulletPoints()}
         </ul>
     );
 }
+
