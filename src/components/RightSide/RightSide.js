@@ -7,6 +7,8 @@ import { SampleDataContext } from '../LeftSide/DataList/SampleData/SampleDataCon
 export default function RightSide() {
   const { jobs, education, volunteer, awards, personalInfo } = useContext(SampleDataContext);
 
+  console.log('Rendering RightSide with data:', { jobs, education, volunteer, awards, personalInfo });
+
   return (
     <div className="rightSide">
       <Header 
