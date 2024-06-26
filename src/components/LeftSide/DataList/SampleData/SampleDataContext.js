@@ -30,9 +30,12 @@ export const SampleDataProvider = ({ children }) => {
     setAwards(newAwards);
   };
 
-  const updatePersonalInfo = (newPersonalInfo) => {
-    console.log('Updating personal info:', newPersonalInfo);
-    setPersonalInfo(newPersonalInfo);
+  const updatePersonalInfo = (name, value) => {
+    setPersonalInfo(prevInfo => ({
+      ...prevInfo,
+      [name]: value
+    }));
+    console.log('Updating personal info:', name, value);
   };
 
   return (
