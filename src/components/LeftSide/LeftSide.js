@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import SelectOption from './Option/selectOption';
 import PersonalDetails from './PersonalDetails/PersonalDetails';
 import Experience from './DataList/Sections/Experience';
@@ -6,56 +6,90 @@ import Education from './DataList/Sections/Education';
 import Volunteering from './DataList/Sections/Volunteering';
 import Awards from './DataList/Sections/Awards';
 import './LeftSide.css';
-import PersonalInfoContext from '../RightSide/Header/PersonalInfoContext'
+import { SampleDataContext } from './DataList/SampleData/SampleDataContext';
 import {
   initialJobsData,
   initialEducationData,
   initialVolunteerData,
   initialAwardsData,
-  initialPersonalInformation, 
-} from './DataList/SampleData/SampleData'; 
+  initialPersonalInformation,
+} from './DataList/SampleData/SampleData';
 
 export default function LeftSide() {
-    const { personalInfo, handlePersonalChange } = useContext(PersonalInfoContext);
+  const { jobs, education, volunteer, awards, personalInfo, updateJobs, updateEducation, updateVolunteer, updateAwards, updatePersonalInfo } = useContext(SampleDataContext);
 
-    const [jobs, setJobs] = useState(initialJobsData);
-    const [education, setEducation] = useState(initialEducationData);
-    const [volunteer, setVolunteer] = useState(initialVolunteerData);
-    const [awards, setAwards] = useState(initialAwardsData);
+  const clearData = () => {
+    console.log('Clearing data');
+    updatePersonalInfo({
+      fullName: '',
+      specialization: '',
+      subSpecialization: '',
+      url: '',
+    });
+    updateJobs([]);
+    updateEducation([]);
+    updateVolunteer([]);
+    updateAwards([]);
+  };
 
-    const clearData = () => {
-        handlePersonalChange('fullName', '');
-        handlePersonalChange('specialization', '');
-        handlePersonalChange('subSpecialization', '');
-        handlePersonalChange('url', '');
-        setJobs([]);
-        setEducation([]);
-        setVolunteer([]);
-        setAwards([]);
-    };
+  const loadData = () => {
+    console.log('Loading data');
+    updatePersonalInfo(initialPersonalInformation);
+    updateJobs(initialJobsData);
+    updateEducation(initialEducationData);
+    updateVolunteer(initialVolunteerData);
+    updateAwards(initialAwardsData);
+  };
 
-    const loadData = () => {
-        handlePersonalChange('fullName', initialPersonalInformation.fullName);
-        handlePersonalChange('specialization', initialPersonalInformation.specialization);
-        handlePersonalChange('subSpecialization', initialPersonalInformation.subSpecialization);
-        handlePersonalChange('url', initialPersonalInformation.url);
-        setJobs(initialJobsData);
-        setEducation(initialEducationData);
-        setVolunteer(initialVolunteerData);
-        setAwards(initialAwardsData);
-    };
+  const handleDeleteJob = (jobId) => {
+    console.log('Deleting job:', jobId);
+    updateJobs(jobs.filter(job => job.id !== jobId));
+  };
 
-    return (
-        <div className="leftSide">
-            <SelectOption clearResume={clearData} loadResume={loadData} />
-            <PersonalDetails personalDetail={personalInfo} onPersonalChange={handlePersonalChange} />
-            <Experience jobsData={jobs} />
-            <Education educationData={education} />
-            <Volunteering volunteerData={volunteer} />
-            <Awards awardsData={awards} />
-        </div>
-    );
+  const handleDeleteEducation = (educationId) => {
+    console.log('Deleting education:', educationId);
+    updateEducation(education.filter(edu => edu.id !== educationId));
+  };
+
+  const handleDeleteVolunteer = (volunteerId) => {
+    console.log('Deleting volunteer:', volunteerId);
+    updateVolunteer(volunteer.filter(vol => vol.id !== volunteerId));
+  };
+
+  const handleDeleteAward = (awardId) => {
+    console.log('Deleting award:', awardId);
+    updateAwards(awards.filter(award => award.id !== awardId));
+  };
+
+  return (
+    <div className="leftSide">
+      <SelectOption clearResume={clearData} loadResume={loadData} />
+      <PersonalDetails personalDetail={personalInfo} onPersonalChange={updatePersonalInfo} />
+      <Experience 
+        jobsData={jobs} 
+        onSave={updateJobs} 
+        onDelete={handleDeleteJob} 
+        onCancel={() => {}} 
+      />
+      <Education 
+        educationData={education} 
+        onSave={updateEducation} 
+        onDelete={handleDeleteEducation} 
+        onCancel={() => {}} 
+      />
+      <Volunteering 
+        volunteerData={volunteer} 
+        onSave={updateVolunteer} 
+        onDelete={handleDeleteVolunteer} 
+        onCancel={() => {}} 
+      />
+      <Awards 
+        awardsData={awards} 
+        onSave={updateAwards} 
+        onDelete={handleDeleteAward} 
+        onCancel={() => {}} 
+      />
+    </div>
+  );
 }
-
-
 
