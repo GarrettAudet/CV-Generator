@@ -40,3 +40,181 @@
     width: 100%;
     padding: 8px;
 }
+
+@media (max-width: 480px) {
+    .app {
+        max-width: 200px;
+        padding: 0px;
+    }
+
+    .leftSide {
+        font-size: 10px;
+    }
+
+    .leftSide .buttonLoader {
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .leftSide .buttonLoader button {
+        font-size: 8px;
+        padding: 5px 10px;
+    }
+
+    .leftSide .personalDetails h2 {
+        font-size: 10px;
+    }
+
+    .detailItem {
+        font-size: 8px;
+    }
+
+    .detailItem input {
+        font-size: 7px;
+    }
+
+    .app {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Experience h2 {
+        font-size: 10px;
+    }
+
+    .LHSInputHeader .iconGrouped .classIcon {
+        width: 10px;
+        height: 10px;
+    }
+
+    .app .rightSide {
+        min-width: 350px;
+        max-width: 400px;
+    }
+
+    .rightSide {
+        max-width: 450px;
+        font-size: 10px;
+        min-height: 1000px;
+    }
+
+    .headers {
+        display: flex;
+        align-items: center;
+    }
+
+    .rightSide .header .name {
+        font-size: 8px;
+    }
+
+    .rightSide .header h2 {
+        font-size: 6px;
+    }
+
+    .rightSide .underline .sectionTitle {
+        font-size: 6px;
+    }
+
+    .experienceItem .experienceTitle,
+    .experienceItem .experienceDateDuration,
+    .underline .experienceParent .caption {
+        font-size: 4px;
+    }
+
+    .experienceItem .experienceTitle {
+        min-width: 200px;
+    }
+
+    .experienceParent ul li {
+        font-size: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app {
+        max-width: 700px;
+        padding: 0px;
+    }
+
+    .leftSide {
+        font-size: 10px;
+    }
+
+    .leftSide .buttonLoader {
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .leftSide .buttonLoader button {
+        font-size: 8px;
+        padding: 5px 10px;
+    }
+
+    .leftSide .personalDetails h2 {
+        font-size: 10px;
+    }
+
+    .detailItem {
+        font-size: 8px;
+    }
+
+    .detailItem input {
+        font-size: 7px;
+    }
+
+    .app {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Experience h2 {
+        font-size: 10px;
+    }
+
+    .LHSInputHeader .iconGrouped .classIcon {
+        width: 10px;
+        height: 10px;
+    }
+
+    .app .rightSide {
+        min-width: 350px;
+        max-width: 400px;
+    }
+
+    .rightSide {
+        max-width: 450px;
+        font-size: 10px;
+        min-height: 1000px;
+    }
+
+    .headers {
+        display: flex;
+        align-items: center;
+    }
+
+    .rightSide .header .name {
+        font-size: 8px;
+    }
+
+    .rightSide .header h2 {
+        font-size: 6px;
+    }
+
+    .rightSide .underline .sectionTitle {
+        font-size: 6px;
+    }
+
+    .experienceItem .experienceTitle,
+    .experienceItem .experienceDateDuration,
+    .underline .experienceParent .caption {
+        font-size: 4px;
+    }
+
+    .experienceItem .experienceTitle {
+        min-width: 200px;
+    }
+
+    .experienceParent ul li {
+        font-size: 4px;
+    }
+}
