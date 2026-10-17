@@ -1,5 +1,43 @@
-CV Generator
+# CV Generator
 
-This React-based CV Generator allows users to input, edit, and preview their CV details, including personal information, professional experience, education, volunteering, and awards. It leverages React's `useState` and `useEffect` hooks for state management, and Context API for global state sharing between input forms and the dynamic CV preview. The application demonstrates a modular component-based architecture and CSS styling for interactive and real-time content updates.
+A React application for entering, editing, and previewing CV information in a two-panel interface.
 
-https://main--dreamy-tulumba-89771f.netlify.app/
+## Features
+
+- Personal information, professional experience, education, volunteering, and awards
+- Component-based input forms and a live CV preview
+- React state and Context providers shared across the editor and preview
+- CSS styling, date inputs, and Font Awesome icons
+
+## Run locally
+
+With Node.js and npm installed:
+
+```sh
+npm ci
+npm start
+```
+
+## Package commands
+
+- `npm start`: development server
+- `npm run build`: production build
+- `npm test`: React Scripts test runner
+
+The project uses React 18 and Create React App's `react-scripts`.
+
+## Structure
+
+- `src/App.js`: editor/preview layout and Context providers
+- `src/components/LeftSide/`: editing controls and data state
+- `src/components/RightSide/`: CV preview
+- `public/`: static application assets
+
+## Existing deployment
+
+[CV Generator on Netlify](https://main--dreamy-tulumba-89771f.netlify.app/) is the deployment linked by the original project. Availability has not been verified.
+
+## Scope
+
+This is a frontend learning project. Use synthetic details when trying the editor.
+
