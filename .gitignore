@@ -65,3 +65,8 @@ public/
 
 # TernJS port file
 .tern-port
+
+# Local dependencies, caches, and credentials
+.env.*
+!.env.example
+!.env.sample
